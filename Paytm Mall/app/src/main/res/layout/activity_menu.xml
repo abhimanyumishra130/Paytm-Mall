@@ -5,332 +5,347 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MenuActivity">
+
     <RelativeLayout
         android:id="@+id/topList"
+        android:background="@color/bg_blue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-<ImageView
-    android:id="@+id/logoMenu"
-    android:layout_centerHorizontal="true"
-    android:src="@drawable/paytmmall_logo"
-    android:layout_width="140dp"
-    android:layout_height="100dp"/>
+        <ImageView
+            android:id="@+id/logoMenu"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/paytmmall_logo" />
 
-    <ImageButton
-        android:id="@+id/cancel"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:layout_marginTop="15dp"
-        android:src="@drawable/ic_cancel"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="15dp" />
+        <ImageButton
+            android:id="@+id/cancel"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_cancel" />
 
-    <LinearLayout
-        android:weightSum="3"
-        android:padding="15dp"
-        android:layout_below="@+id/logoMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logoMenu"
+            android:padding="15dp"
+            android:weightSum="3">
 
-        <RelativeLayout
-            android:id="@+id/My_Orders"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageButton
-                android:id="@+id/my_orders"
-                android:background="@drawable/icon_bg"
-                android:src="@drawable/my_orders"
-                android:layout_centerHorizontal="true"
+            <RelativeLayout
+                android:id="@+id/My_Orders"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:text="My Orders"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/my_orders"
-                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/my_orders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_bg"
+                    android:src="@drawable/my_orders" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/my_orders"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="My Orders" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/Wish_List"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </RelativeLayout>
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/wish_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_bg"
+                    android:src="@drawable/wishlist_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/wish_list"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Wish List" />
+            </RelativeLayout>
 
 
-        <RelativeLayout
-            android:id="@+id/Wish_List"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageButton
-                android:id="@+id/wish_list"
-                android:background="@drawable/icon_bg"
-                android:src="@drawable/wish_list"
-                android:layout_centerHorizontal="true"
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:text="Wish List"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/wish_list"
-                android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </RelativeLayout>
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_bg"
+                    android:src="@drawable/help" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/help"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="24x7 Help" />
+            </RelativeLayout>
 
 
+        </LinearLayout>
 
-        <RelativeLayout
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageButton
-                android:id="@+id/help"
-                android:background="@drawable/icon_bg"
-                android:src="@drawable/help"
-                android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:text="24x7 Help"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/help"
-                android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </RelativeLayout>
-
-
-    </LinearLayout>
-
-</RelativeLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/first_row"
-        android:layout_marginTop="80dp"
-        android:weightSum="3"
-        android:layout_below="@+id/topList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topList"
+        android:layout_marginTop="80dp"
+        android:weightSum="3">
 
         <RelativeLayout
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
             <ImageButton
                 android:id="@+id/trending"
-                android:background="#00000000"
-                android:src="@drawable/ic_trending"
-                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="#00000000"
+                android:src="@drawable/ic_trending" />
+
             <TextView
-                android:text="Trending"
-                android:textColor="@color/black"
-                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/trending"
                 android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_marginTop="5dp"
+                android:text="Trending"
+                android:textColor="@color/black" />
         </RelativeLayout>
 
 
         <RelativeLayout
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
             <ImageButton
                 android:id="@+id/electronics"
-                android:background="#00000000"
-                android:src="@drawable/electronics"
-                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="#00000000"
+                android:src="@drawable/electronics" />
+
             <TextView
-                android:text="Electronics"
-                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/electronics"
                 android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_marginTop="5dp"
+                android:text="Electronics" />
         </RelativeLayout>
 
 
-
         <RelativeLayout
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
             <ImageButton
                 android:id="@+id/mens_fashion"
-                android:background="#00000000"
-                android:src="@drawable/ic_mens_fashion"
-                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="#00000000"
+                android:src="@drawable/mens_fashion" />
+
             <TextView
-                android:text="Men's Fashion"
-                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/mens_fashion"
                 android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_marginTop="5dp"
+                android:text="Men's Fashion" />
         </RelativeLayout>
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/second_row"
-        android:layout_marginTop="30dp"
-        android:weightSum="3"
-        android:layout_below="@+id/first_row"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_row"
+        android:layout_marginTop="30dp"
+        android:weightSum="3">
 
 
         <RelativeLayout
-            android:layout_weight="1"
-            android:paddingTop="10dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp">
+
             <ImageButton
                 android:id="@+id/women_fashion"
-                android:background="#00000000"
-                android:src="@drawable/ic_womens_fashion"
-                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="#00000000"
+                android:src="@drawable/womens_fashion" />
+
             <TextView
-                android:text="Women's Fashion"
-                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/women_fashion"
                 android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_marginTop="5dp"
+                android:text="Women's Fashion" />
         </RelativeLayout>
 
 
-
         <RelativeLayout
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
             <ImageButton
                 android:id="@+id/mobile"
-                android:background="#00000000"
-                android:src="@drawable/ic_mobile"
-                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="#00000000"
+                android:src="@drawable/ic_mobile" />
+
             <TextView
-                android:text="Mobile Devices"
-                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/mobile"
                 android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_marginTop="5dp"
+                android:text="Mobile Devices" />
         </RelativeLayout>
 
 
-
-
         <RelativeLayout
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
             <ImageButton
                 android:id="@+id/kitchen"
-                android:background="#00000000"
-                android:src="@drawable/cooker"
-                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="#00000000"
+                android:src="@drawable/cooker" />
+
             <TextView
-                android:text="Home &amp; Kitchen"
-                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/kitchen"
                 android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_marginTop="15dp"
+                android:text="Home &amp; Kitchen" />
         </RelativeLayout>
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/third_row"
-        android:layout_marginTop="30dp"
-        android:weightSum="3"
-        android:layout_below="@+id/second_row"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/second_row"
+        android:layout_marginTop="30dp"
+        android:weightSum="3">
 
 
         <RelativeLayout
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
             <ImageButton
                 android:id="@+id/appliance"
-                android:background="#00000000"
-                android:src="@drawable/applience"
-                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="#00000000"
+                android:src="@drawable/applience" />
+
             <TextView
-                android:text="Appliance"
-                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/appliance"
                 android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_marginTop="5dp"
+                android:text="Appliance" />
         </RelativeLayout>
 
 
-
-
         <RelativeLayout
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
             <ImageButton
                 android:id="@+id/grocery"
-                android:background="#00000000"
-                android:src="@drawable/grocery"
-                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="#00000000"
+                android:src="@drawable/grocery" />
+
             <TextView
-                android:text="Grocery"
-                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/grocery"
                 android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_marginTop="5dp"
+                android:text="Grocery" />
         </RelativeLayout>
 
 
-
-
         <RelativeLayout
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
             <ImageButton
                 android:id="@+id/toys"
-                android:src="@drawable/toys"
-                android:background="#00000000"
-                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="#00000000"
+                android:src="@drawable/toys" />
+
             <TextView
-                android:text="Toys &amp; Kids"
-                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/toys"
                 android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_marginTop="5dp"
+                android:text="Toys &amp; Kids" />
         </RelativeLayout>
 
 
     </LinearLayout>
-
 
 
 </RelativeLayout>

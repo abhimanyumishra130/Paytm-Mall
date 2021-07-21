@@ -8,6 +8,7 @@
     android:padding="20dp"
     tools:context=".ProductActivity">
     <TextView
+        android:id="@+id/categoriesName"
         android:text="Electronics"
         android:textSize="20sp"
         android:textColor="@color/black"

@@ -14,14 +14,20 @@ import android.widget.RelativeLayout;
 public class MenuActivity extends AppCompatActivity {
 
 
-    private ImageButton trending,electronics;
-    private ImageButton MyOrder;
+    private ImageButton trending,electronics,men_fashion,women_fashion,mobile_devices,home_kitchen,appliance,grocery,toys_kids;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         initView();
+        SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Trending");
+        ProdActivity prodActivity = new ProdActivity();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.linearLayout,prodActivity);
+        transaction.commit();
+
         trending.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,13 +38,7 @@ public class MenuActivity extends AppCompatActivity {
                 transaction.commit();
             }
         });
-        MyOrder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this, MyOrdersActivity.class);
-                startActivity(intent);
-            }
-        });
+
         electronics.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,11 +49,88 @@ public class MenuActivity extends AppCompatActivity {
                 transaction.commit();
             }
         });
+        men_fashion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Electronic");
+                ProdActivity prodActivity = new ProdActivity();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.linearLayout,prodActivity);
+                transaction.commit();
+            }
+        });
+        women_fashion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Electronic");
+                ProdActivity prodActivity = new ProdActivity();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.linearLayout,prodActivity);
+                transaction.commit();
+            }
+        });
+        mobile_devices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Electronic");
+                ProdActivity prodActivity = new ProdActivity();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.linearLayout,prodActivity);
+                transaction.commit();
+            }
+        });
+        home_kitchen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Electronic");
+                ProdActivity prodActivity = new ProdActivity();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.linearLayout,prodActivity);
+                transaction.commit();
+            }
+        });
+        appliance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Electronic");
+                ProdActivity prodActivity = new ProdActivity();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.linearLayout,prodActivity);
+                transaction.commit();
+            }
+        });
+        grocery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Electronic");
+                ProdActivity prodActivity = new ProdActivity();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.linearLayout,prodActivity);
+                transaction.commit();
+            }
+        });
+        toys_kids.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Electronic");
+                ProdActivity prodActivity = new ProdActivity();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.linearLayout,prodActivity);
+                transaction.commit();
+            }
+        });
+
     }
 
     private void initView() {
         trending=findViewById(R.id.trending);
-        MyOrder=findViewById(R.id.my_orders);
         electronics=findViewById(R.id.electronics);
+        men_fashion=findViewById(R.id.mens_fashion);
+        women_fashion=findViewById(R.id.women_fashion);
+        mobile_devices=findViewById(R.id.mobile);
+        home_kitchen=findViewById(R.id.kitchen);
+        appliance=findViewById(R.id.appliance);
+        grocery=findViewById(R.id.grocery);
+        toys_kids=findViewById(R.id.toys);
     }
 }

@@ -1,6 +1,7 @@
 package com.example.paytmmall;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -25,8 +26,10 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Trending");
-                Intent intent = new Intent(MenuActivity.this, ProductActivity.class);
-                startActivity(intent);
+                ProdActivity prodActivity = new ProdActivity();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.linearLayout,prodActivity);
+                transaction.commit();
             }
         });
         MyOrder.setOnClickListener(new View.OnClickListener() {
@@ -40,8 +43,10 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Electronic");
-                Intent intent = new Intent(MenuActivity.this, ProductActivity.class);
-                startActivity(intent);
+                ProdActivity prodActivity = new ProdActivity();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.linearLayout,prodActivity);
+                transaction.commit();
             }
         });
     }

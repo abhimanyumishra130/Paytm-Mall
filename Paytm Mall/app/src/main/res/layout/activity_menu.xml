@@ -8,9 +8,9 @@
 
     <RelativeLayout
         android:id="@+id/topList"
-        android:background="@color/bg_blue"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/bg_blue">
 
         <ImageView
             android:id="@+id/logoMenu"
@@ -110,239 +110,239 @@
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/first_row"
-        android:layout_width="match_parent"
+    <ScrollView
+        android:scrollbars="none"
+        android:id="@+id/scrollView"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/topList"
-        android:layout_marginTop="80dp"
-        android:weightSum="3">
+        android:layout_below="@+id/topList">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/trending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#00000000"
+                    android:src="@drawable/ic_trending" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="Trending"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/electronics"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:src="@drawable/electronics" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Electronics" />
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <ImageButton
-                android:id="@+id/trending"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:background="#00000000"
-                android:src="@drawable/ic_trending" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/trending"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp"
-                android:text="Trending"
-                android:textColor="@color/black" />
-        </RelativeLayout>
-
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <ImageButton
-                android:id="@+id/electronics"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:background="#00000000"
-                android:src="@drawable/electronics" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/electronics"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp"
-                android:text="Electronics" />
-        </RelativeLayout>
-
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/mens_fashion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="#00000000"
                 android:src="@drawable/mens_fashion" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/mens_fashion"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:layout_marginTop="5dp"
                 android:text="Men's Fashion" />
-        </RelativeLayout>
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/second_row"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/first_row"
-        android:layout_marginTop="30dp"
-        android:weightSum="3">
+        </LinearLayout>
 
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingTop="10dp">
+            android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/women_fashion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="#00000000"
                 android:src="@drawable/womens_fashion" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/women_fashion"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:layout_marginTop="5dp"
                 android:text="Women's Fashion" />
-        </RelativeLayout>
+        </LinearLayout>
 
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/mobile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="#00000000"
                 android:src="@drawable/ic_mobile" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/mobile"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:layout_marginTop="5dp"
                 android:text="Mobile Devices" />
-        </RelativeLayout>
+        </LinearLayout>
 
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/kitchen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="#00000000"
                 android:src="@drawable/cooker" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/kitchen"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:text="Home &amp; Kitchen" />
-        </RelativeLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/third_row"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/second_row"
-        android:layout_marginTop="30dp"
-        android:weightSum="3">
+        </LinearLayout>
 
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:orientation="vertical">
+
 
             <ImageButton
                 android:id="@+id/appliance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="#00000000"
                 android:src="@drawable/applience" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/appliance"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:layout_marginTop="5dp"
                 android:text="Appliance" />
-        </RelativeLayout>
+        </LinearLayout>
 
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/grocery"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="#00000000"
                 android:src="@drawable/grocery" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/grocery"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:layout_marginTop="5dp"
                 android:text="Grocery" />
-        </RelativeLayout>
+        </LinearLayout>
 
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:orientation="vertical">
+
 
             <ImageButton
                 android:id="@+id/toys"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="#00000000"
                 android:src="@drawable/toys" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/toys"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:layout_marginTop="5dp"
                 android:text="Toys &amp; Kids" />
-        </RelativeLayout>
+        </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/scrollView"
+        android:layout_below="@id/topList">
 
 
     </LinearLayout>

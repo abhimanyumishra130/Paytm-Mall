@@ -15,6 +15,7 @@ public class MenuActivity extends AppCompatActivity {
 
 
     private ImageButton trending,electronics,men_fashion,women_fashion,mobile_devices,home_kitchen,appliance,grocery,toys_kids;
+    private ImageButton cancel;
 
 
     @Override
@@ -27,6 +28,14 @@ public class MenuActivity extends AppCompatActivity {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.linearLayout,prodActivity);
         transaction.commit();
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( MenuActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         trending.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +61,7 @@ public class MenuActivity extends AppCompatActivity {
         men_fashion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Electronic");
+                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Men Fashion");
                 ProdActivity prodActivity = new ProdActivity();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.linearLayout,prodActivity);
@@ -62,7 +71,7 @@ public class MenuActivity extends AppCompatActivity {
         women_fashion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Electronic");
+                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Women Fashion");
                 ProdActivity prodActivity = new ProdActivity();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.linearLayout,prodActivity);
@@ -72,7 +81,7 @@ public class MenuActivity extends AppCompatActivity {
         mobile_devices.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Electronic");
+                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Mobile");
                 ProdActivity prodActivity = new ProdActivity();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.linearLayout,prodActivity);
@@ -82,7 +91,7 @@ public class MenuActivity extends AppCompatActivity {
         home_kitchen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Electronic");
+                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Home kitchen");
                 ProdActivity prodActivity = new ProdActivity();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.linearLayout,prodActivity);
@@ -92,7 +101,7 @@ public class MenuActivity extends AppCompatActivity {
         appliance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Electronic");
+                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Appliance");
                 ProdActivity prodActivity = new ProdActivity();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.linearLayout,prodActivity);
@@ -102,7 +111,7 @@ public class MenuActivity extends AppCompatActivity {
         grocery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Electronic");
+                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Grocery");
                 ProdActivity prodActivity = new ProdActivity();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.linearLayout,prodActivity);
@@ -112,7 +121,7 @@ public class MenuActivity extends AppCompatActivity {
         toys_kids.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Electronic");
+                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Toys Kids");
                 ProdActivity prodActivity = new ProdActivity();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.linearLayout,prodActivity);
@@ -123,6 +132,8 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        cancel=findViewById(R.id.cancel);
+
         trending=findViewById(R.id.trending);
         electronics=findViewById(R.id.electronics);
         men_fashion=findViewById(R.id.mens_fashion);

@@ -10,7 +10,7 @@
         android:id="@+id/topList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/bg_blue">
+        android:background="@drawable/bg_categories">
 
         <ImageView
             android:id="@+id/logoMenu"
@@ -111,13 +111,15 @@
     </RelativeLayout>
 
     <ScrollView
+        android:background="@drawable/bg_categories"
         android:scrollbars="none"
         android:id="@+id/scrollView"
-        android:layout_width="120dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/topList">
 
         <LinearLayout
+            android:layout_marginTop="15dp"
             android:layout_width="120dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -147,7 +149,7 @@
 
 
             <LinearLayout
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -170,7 +172,7 @@
 
 
         <LinearLayout
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -194,7 +196,7 @@
 
 
         <LinearLayout
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -217,7 +219,7 @@
 
 
         <LinearLayout
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -239,7 +241,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -263,7 +265,7 @@
 
 
         <LinearLayout
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -287,7 +289,7 @@
 
 
         <LinearLayout
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -310,7 +312,7 @@
 
 
         <LinearLayout
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">

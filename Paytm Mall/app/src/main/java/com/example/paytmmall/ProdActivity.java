@@ -10,11 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 
-public class ProdActivity extends Fragment {
+public class ProdActivity extends Fragment implements OnClickListener{
     private RecyclerView recyclerView;
     private TextView categoriesName;
     private ArrayList<ProductModel> productModelList = new ArrayList<>();
@@ -43,7 +44,7 @@ public class ProdActivity extends Fragment {
     }
 
     private void setRecyclerViewTrending() {
-        ProductAdapter adapter = new ProductAdapter(productModelList);
+        ProductAdapter adapter = new ProductAdapter(productModelList,this);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),3);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(gridLayoutManager);
@@ -63,6 +64,56 @@ public class ProdActivity extends Fragment {
                 ProductModel prod = new ProductModel(R.drawable.electronics,"Electronics");
                 productModelList.add(prod);
             }
+        }else if(str.equals("Men Fashion")){
+            categoriesName.setText(str);
+            for(int i=0; i<10; i++){
+                ProductModel prod = new ProductModel(R.drawable.mens_fashion,"Men's Fashion");
+                productModelList.add(prod);
+            }
+        }else if(str.equals("Women Fashion")){
+            categoriesName.setText(str);
+            for(int i=0; i<10; i++){
+                ProductModel prod = new ProductModel(R.drawable.womens_fashion,"Women's Fashion");
+                productModelList.add(prod);
+            }
+        }else if(str.equals("Mobile")){
+            categoriesName.setText(str);
+            for(int i=0; i<10; i++){
+                ProductModel prod = new ProductModel(R.drawable.ic_mobile,"Mobile Devices");
+                productModelList.add(prod);
+            }
+        }else if(str.equals("Home kitchen")){
+            categoriesName.setText(str);
+            for(int i=0; i<10; i++){
+                ProductModel prod = new ProductModel(R.drawable.cooker,"Home & Kitchen");
+                productModelList.add(prod);
+            }
+        }else if(str.equals("Appliance")){
+            categoriesName.setText(str);
+            for(int i=0; i<10; i++){
+                ProductModel prod = new ProductModel(R.drawable.applience,"Appliance");
+                productModelList.add(prod);
+            }
+        }else if(str.equals("Grocery")){
+            categoriesName.setText(str);
+            for(int i=0; i<10; i++){
+                ProductModel prod = new ProductModel(R.drawable.grocery,"Grocery");
+                productModelList.add(prod);
+            }
+        }else if(str.equals("Toys Kids")){
+            categoriesName.setText(str);
+            for(int i=0; i<10; i++){
+                ProductModel prod = new ProductModel(R.drawable.toys,"Toys & Kids");
+                productModelList.add(prod);
+            }
         }
+    }
+
+    @Override
+    public void onClick(ProductModel productModel, int position) {
+
+        String str = productModel.getText();
+        Toast.makeText(getContext(), str, Toast.LENGTH_SHORT).show();
+
     }
 }

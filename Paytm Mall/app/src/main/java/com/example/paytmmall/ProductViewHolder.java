@@ -3,6 +3,7 @@ package com.example.paytmmall;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,9 +15,11 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
 
     private ImageView img;
     private TextView name;
+    private OnClickListener onClickListener;
 
-    public ProductViewHolder(@NonNull  View itemView) {
+    public ProductViewHolder(@NonNull  View itemView, OnClickListener onClickListener) {
         super(itemView);
+        this.onClickListener=onClickListener;
         initView(itemView);
     }
 
@@ -27,5 +30,11 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
     public  void SetData(ProductModel productModel){
         img.setImageResource(productModel.getImg());
         name.setText(productModel.getText());
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClickListener.onClick(productModel,getAdapterPosition());
+            }
+        });
     }
 }

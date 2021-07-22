@@ -1,0 +1,2 @@
+rootProject.name = "paytm mall clone"
+include ':app'

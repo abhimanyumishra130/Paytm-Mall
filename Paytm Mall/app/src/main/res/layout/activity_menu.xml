@@ -41,10 +41,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/my_orders"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_centerHorizontal="true"
                     android:background="@drawable/icon_bg"
                     android:src="@drawable/my_orders" />
@@ -130,13 +130,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/trending"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:background="#00000000"
-                    android:src="@drawable/ic_trending" />
+                    android:src="@drawable/trending" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -154,13 +154,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/electronics"
                     android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:background="#00000000"
-                    android:src="@drawable/electronics" />
+                    android:src="@drawable/electronic" />
 
                 <TextView
                     android:layout_gravity="center"
@@ -177,12 +177,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/mens_fashion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:background="#00000000"
                 android:src="@drawable/mens_fashion" />
 
             <TextView
@@ -201,7 +200,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/women_fashion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -224,7 +223,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/mobile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -246,7 +245,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/kitchen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -271,7 +270,7 @@
             android:orientation="vertical">
 
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/appliance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -294,7 +293,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/grocery"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -318,7 +317,7 @@
             android:orientation="vertical">
 
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/toys"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

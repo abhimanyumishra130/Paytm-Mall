@@ -54,34 +54,80 @@ public class ProdActivity extends Fragment implements OnClickListener{
         String str = SharedPreferenceHelper.getStringPreference(getContext(),"categories");
         if(str.equals("Trending")){
             categoriesName.setText(str);
-            for(int i=0; i<10; i++){
-                ProductModel prod = new ProductModel(R.drawable.ic_trending,"Trending");
-                productModelList.add(prod);
-            }
+            ProductModel mask = new ProductModel(R.drawable.mask,"Mask And Sanitizers");
+            productModelList.add(mask);
+
+            ProductModel oximeter = new ProductModel(R.drawable.oximeter,"Pulse Oximeter");
+            productModelList.add(oximeter);
+
+            ProductModel electronic = new ProductModel(R.drawable.ic_electronics,"Electronics");
+            productModelList.add(electronic);
+
+            ProductModel mobiles = new ProductModel(R.drawable.ic_mobiles,"Mobiles");
+            productModelList.add(mobiles);
+
+            ProductModel tablets = new ProductModel(R.drawable.ic_tablets,"Tablets");
+            productModelList.add(tablets);
+
+            ProductModel featured = new ProductModel(R.drawable.featured_phones,"Featured Phones");
+            productModelList.add(featured);
+
+            ProductModel used = new ProductModel(R.drawable.used_phones,"Used Phones");
+            productModelList.add(used);
+
         }else if(str.equals("Electronic")){
             categoriesName.setText(str);
+            ProductModel headPhone = new ProductModel(R.drawable.headphones,"Over-Ear Headphones");
+            productModelList.add(headPhone);
             for(int i=0; i<10; i++){
                 ProductModel prod = new ProductModel(R.drawable.electronics,"Electronics");
                 productModelList.add(prod);
             }
         }else if(str.equals("Men Fashion")){
             categoriesName.setText(str);
-            for(int i=0; i<10; i++){
-                ProductModel prod = new ProductModel(R.drawable.mens_fashion,"Men's Fashion");
-                productModelList.add(prod);
-            }
+
+            ProductModel tShirt = new ProductModel(R.drawable.t_shirt,"T-Shirt");
+            productModelList.add(tShirt);
+
+            ProductModel casualShirt = new ProductModel(R.drawable.casual_shirt,"Casual Shirt");
+            productModelList.add(casualShirt);
+
+            ProductModel jakie = new ProductModel(R.drawable.jakie,"Jackets");
+            productModelList.add(jakie);
+
+            ProductModel formalShirt = new ProductModel(R.drawable.formal_shirt,"Formal Shirts");
+            productModelList.add(formalShirt);
+
+
         }else if(str.equals("Women Fashion")){
             categoriesName.setText(str);
             for(int i=0; i<10; i++){
                 ProductModel prod = new ProductModel(R.drawable.womens_fashion,"Women's Fashion");
                 productModelList.add(prod);
             }
-        }else if(str.equals("Mobile")){
+        }else if(str.equals("Mobile Accessories")){
             categoriesName.setText(str);
-            for(int i=0; i<10; i++){
-                ProductModel prod = new ProductModel(R.drawable.ic_mobile,"Mobile Devices");
-                productModelList.add(prod);
-            }
+            ProductModel mobiles = new ProductModel(R.drawable.ic_mobiles,"Mobiles");
+            productModelList.add(mobiles);
+
+            ProductModel tablets = new ProductModel(R.drawable.ic_tablets,"Tablets");
+            productModelList.add(tablets);
+
+            ProductModel featured = new ProductModel(R.drawable.featured_phones,"Featured Phones");
+            productModelList.add(featured);
+
+            ProductModel used = new ProductModel(R.drawable.used_phones,"Used Phones");
+            productModelList.add(used);
+
+            ProductModel mobileCables = new ProductModel(R.drawable.mobiles_cables,"Mobile Cables");
+            productModelList.add(mobileCables);
+
+            ProductModel charger = new ProductModel(R.drawable.charger,"Charger");
+            productModelList.add(charger);
+
+            ProductModel screenGuard = new ProductModel(R.drawable.screen_gaurd,"Screen Guard");
+            productModelList.add(screenGuard);
+
         }else if(str.equals("Home kitchen")){
             categoriesName.setText(str);
             for(int i=0; i<10; i++){

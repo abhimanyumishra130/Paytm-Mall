@@ -79,10 +79,38 @@ public class ProdActivity extends Fragment implements OnClickListener{
             categoriesName.setText(str);
             ProductModel headPhone = new ProductModel(R.drawable.headphones,"Over-Ear Headphones");
             productModelList.add(headPhone);
-            for(int i=0; i<10; i++){
-                ProductModel prod = new ProductModel(R.drawable.electronics,"Electronics");
-                productModelList.add(prod);
-            }
+
+            ProductModel wireless = new ProductModel(R.drawable.wireless,"Truly Wireless");
+            productModelList.add(wireless);
+
+            ProductModel bluetooth = new ProductModel(R.drawable.bluetooth,"Bluetooth Earphones");
+            productModelList.add(bluetooth);
+
+            ProductModel speakers = new ProductModel(R.drawable.speakers,"Portable Speakers");
+            productModelList.add(speakers);
+
+            ProductModel mobiles = new ProductModel(R.drawable.ic_mobiles,"Mobiles");
+            productModelList.add(mobiles);
+
+            ProductModel tablets = new ProductModel(R.drawable.ic_tablets,"Tablets");
+            productModelList.add(tablets);
+
+            ProductModel featured = new ProductModel(R.drawable.featured_phones,"Featured Phones");
+            productModelList.add(featured);
+
+            ProductModel used = new ProductModel(R.drawable.used_phones,"Used Phones");
+            productModelList.add(used);
+
+            ProductModel mobileCables = new ProductModel(R.drawable.mobiles_cables,"Mobile Cables");
+            productModelList.add(mobileCables);
+
+            ProductModel charger = new ProductModel(R.drawable.charger,"Charger");
+            productModelList.add(charger);
+
+            ProductModel screenGuard = new ProductModel(R.drawable.screen_gaurd,"Screen Guard");
+            productModelList.add(screenGuard);
+
+
         }else if(str.equals("Men Fashion")){
             categoriesName.setText(str);
 

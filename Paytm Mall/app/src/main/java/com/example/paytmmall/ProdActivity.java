@@ -113,7 +113,7 @@ public class ProdActivity extends Fragment implements OnClickListener{
     public void onClick(ProductModel productModel, int position) {
 
         String str = productModel.getText();
-        Toast.makeText(getContext(), str, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), str+"   "+position, Toast.LENGTH_SHORT).show();
 
     }
 }

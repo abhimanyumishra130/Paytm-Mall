@@ -18,7 +18,7 @@ public class MyOrdersActivity extends AppCompatActivity {
         go_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MyOrdersActivity.this,MainActivity.class);
+                Intent intent = new Intent(MyOrdersActivity.this,firstPage.class);
                 startActivity(intent);
             }
         });

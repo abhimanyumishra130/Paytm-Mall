@@ -19,7 +19,8 @@
                 android:layout_height="match_parent"
                 android:src="@drawable/realme_c1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/todo"/>
 
             <ImageView
                 android:id="@+id/like"
@@ -30,14 +31,15 @@
                 android:src="@drawable/ic_baseline_favorite_border_24"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginRight="15dp" />
+                android:layout_marginRight="15dp"
+                android:contentDescription="@string/todo"/>
 
             <TextView
                 android:id="@+id/title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Realme C1 3Gb 32GB Cross Black"
+                android:text="@string/realme_c1_3gb_32gb_cross_black"
                 android:textColor="@color/black"
                 android:textSize="17sp"
                 android:textStyle="normal"
@@ -49,28 +51,29 @@
                 android:id="@+id/star"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_baseline_star_24"
                 android:gravity="center"
-                android:text="4.3"
+                android:text="@string/_4_3"
                 android:textColor="#FFF400"
                 app:layout_constraintStart_toEndOf="@+id/image"
                 app:layout_constraintTop_toBottomOf="@+id/title"
-                android:drawableLeft="@drawable/ic_baseline_star_24" />
+                app:drawableStartCompat="@drawable/ic_baseline_star_24"
+                app:drawableLeftCompat="@drawable/ic_baseline_star_24" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:gravity="center"
-                android:text="(6)"
+                android:text="@string/_6"
                 app:layout_constraintStart_toEndOf="@+id/star"
-                app:layout_constraintTop_toBottomOf="@+id/title" />
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                android:layout_marginStart="5dp" />
 
             <TextView
                 android:id="@+id/amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="₹9,599"
+                android:text="@string/_9_599"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/image"
@@ -93,11 +96,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="4%off"
+                android:text="@string/_4_off"
                 android:textColor="@android:color/holo_green_dark"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/amountCut"
-                app:layout_constraintTop_toTopOf="@id/amountCut" />
+                app:layout_constraintTop_toTopOf="@id/amountCut"
+                android:layout_marginStart="10dp" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

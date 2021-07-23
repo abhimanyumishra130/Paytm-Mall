@@ -3,4 +3,20 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="_9_999"><strike>₹9,999</strike></string>
+    <string name="realme_c1_3gb_32gb_cross_black">Realme C1 3Gb 32GB Cross Black</string>
+    <string name="_8_999">₹8,999</string>
+    <string name="_7">(7)</string>
+    <string name="_4_3">4.3</string>
+    <string name="hurry_only_2_left">Hurry, Only 2 left!</string>
+    <string name="emi_starts_299_month">EMI starts ₹299/month</string>
+    <string name="view_plans">View Plans</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="_431703">431703</string>
+    <string name="change">Change</string>
+    <string name="todo">TODO</string>
+    <string name="_6">(6)</string>
+    <string name="_9_599">₹9,599</string>
+    <string name="_4_off">4%off</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="add_to_cart">Add To Cart</string>
 </resources>

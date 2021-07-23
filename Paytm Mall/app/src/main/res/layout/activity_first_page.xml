@@ -54,7 +54,8 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="1.0"
-                        app:srcCompat="@drawable/ic_baseline_menu_24" />
+                        app:srcCompat="@drawable/ic_baseline_menu_24"
+                        tools:ignore="VectorDrawableCompat" />
 
                     <ImageView
                         android:id="@+id/ivCart"
@@ -85,7 +86,8 @@
                         app:layout_constraintStart_toEndOf="@+id/ivPaytmMallIcon"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="1.0"
-                        app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+                        app:srcCompat="@drawable/ic_baseline_favorite_border_24"
+                        tools:ignore="VectorDrawableCompat" />
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardView3"
@@ -115,7 +117,8 @@
                             android:layout_height="41dp"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/ic_baseline_search_24" />
+                            android:src="@drawable/ic_baseline_search_24"
+                            android:layout_marginLeft="20dp" />
                     </androidx.cardview.widget.CardView>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -640,7 +643,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="@id/ivCasualShoes"
-                        app:layout_constraintTop_toBottomOf="@id/ivCasualShoes" />
+                        app:layout_constraintTop_toBottomOf="@id/ivCasualShoes"
+                        android:layout_marginLeft="10dp" />
 
 
                     <ImageView
@@ -652,7 +656,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/ivCasualShoes"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.098" />
+                        app:layout_constraintVertical_bias="0.098"
+                        android:layout_marginLeft="20dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -665,7 +670,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="@id/ivKurtas"
-                        app:layout_constraintTop_toBottomOf="@id/ivKurtas" />
+                        app:layout_constraintTop_toBottomOf="@id/ivKurtas"
+                        android:layout_marginLeft="16dp" />
 
 
                     <ImageView
@@ -677,7 +683,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/ivKurtas"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.098" />
+                        app:layout_constraintVertical_bias="0.098"
+                        android:layout_marginLeft="20dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -702,7 +709,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/ivBeltsAndWallets"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.098" />
+                        app:layout_constraintVertical_bias="0.098"
+                        android:layout_marginLeft="20dp" />
 
 
                     <TextView
@@ -716,7 +724,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="@id/ivBriefsAndTrunks"
-                        app:layout_constraintTop_toBottomOf="@id/ivBriefsAndTrunks" />
+                        app:layout_constraintTop_toBottomOf="@id/ivBriefsAndTrunks"
+                        android:layout_marginLeft="16dp" />
 
                     <ImageView
                         android:id="@+id/ivSportShoes"
@@ -727,7 +736,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/ivBriefsAndTrunks"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.098" />
+                        app:layout_constraintVertical_bias="0.098"
+                        android:layout_marginLeft="20dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -740,19 +750,21 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="@id/ivSportShoes"
-                        app:layout_constraintTop_toBottomOf="@id/ivSportShoes" />
+                        app:layout_constraintTop_toBottomOf="@id/ivSportShoes"
+                        android:layout_marginLeft="16dp" />
 
 
                     <ImageView
                         android:id="@+id/ivSunglasses"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:layout_marginStart="20dp"
                         android:src="@drawable/sunglasses"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/ivSportShoes"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.098" />
+                        app:layout_constraintVertical_bias="0.098"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -776,7 +788,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/ivSunglasses"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.098" />
+                        app:layout_constraintVertical_bias="0.098"
+                        android:layout_marginLeft="20dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -789,7 +802,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="@id/ivCasesAndCovers"
-                        app:layout_constraintTop_toBottomOf="@id/ivCasesAndCovers" />
+                        app:layout_constraintTop_toBottomOf="@id/ivCasesAndCovers"
+                        android:layout_marginLeft="10dp" />
 
 
                     <ImageView
@@ -801,7 +815,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/ivCasesAndCovers"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.098" />
+                        app:layout_constraintVertical_bias="0.098"
+                        android:layout_marginLeft="20dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -825,7 +840,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/ivWatchesAndSunglasses"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.098" />
+                        app:layout_constraintVertical_bias="0.098"
+                        android:layout_marginLeft="20dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -849,7 +865,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/ivWiredEarphones"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.098" />
+                        app:layout_constraintVertical_bias="0.098"
+                        android:layout_marginLeft="20dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -862,7 +879,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="@id/ivTrackPant"
-                        app:layout_constraintTop_toBottomOf="@id/ivTrackPant" />
+                        app:layout_constraintTop_toBottomOf="@id/ivTrackPant"
+                        android:layout_marginLeft="16dp" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -880,7 +898,8 @@
                 android:layout_marginStart="27dp"
                 android:text="Top Picks"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginLeft="27dp" />
 
             <ImageView
                 android:layout_width="match_parent"

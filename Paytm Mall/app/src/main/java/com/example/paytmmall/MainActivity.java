@@ -4,26 +4,27 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageButton img;
-    private Button cat;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        cat=findViewById(R.id.categories);
-        cat.setOnClickListener(new View.OnClickListener() {
+
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,MenuActivity.class);
-                startActivity(intent);
+            public void run() {
+                Intent i = new Intent(MainActivity.this, firstPage.class);
+                startActivity(i);
+                finish();
             }
-        });
+        }, 2500);
     }
 }
+

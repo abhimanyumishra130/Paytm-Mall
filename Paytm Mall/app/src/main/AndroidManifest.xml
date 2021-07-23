@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PaytmMall">
-        <activity android:name=".MyOrdersActivity"></activity>
+        <activity android:name=".View_Device"></activity>
+        <activity android:name=".ProductViewer_Activity" />
+        <activity android:name=".MyOrdersActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

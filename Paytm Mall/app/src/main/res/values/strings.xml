@@ -2,4 +2,5 @@
     <string name="app_name">Paytm Mall</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_9_999"><strike>₹9,999</strike></string>
 </resources>

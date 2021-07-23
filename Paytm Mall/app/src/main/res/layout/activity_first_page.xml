@@ -555,51 +555,32 @@
 
             </HorizontalScrollView>
 
-            <HorizontalScrollView
-                android:id="@+id/thirdScrollView"
-                android:layout_width="wrap_content"
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="none"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/firstHorizontalScroll"
-                app:layout_constraintVertical_bias="0.0">
+                android:orientation="horizontal"
+                android:paddingTop="30dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingTop="30dp">
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/slider"
+                    android:layout_width="414dp"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorEnabled="true"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="5dp"
+                    app:sliderIndicatorRadius="1dp"
+                    app:sliderIndicatorSelectedColor="#00BFFF"
+                    app:sliderIndicatorUnselectedColor="#FFF"
+                    app:sliderScrollTimeInSec="1" />
 
-                    <ImageView
-                        android:layout_width="414dp"
-                        android:layout_height="200dp"
-                        android:src="@drawable/first_offer" />
-
-
-                    <ImageView
-                        android:layout_width="414dp"
-                        android:layout_height="200dp"
-                        android:src="@drawable/second_offers" />
-
-                    <ImageView
-                        android:layout_width="414dp"
-                        android:layout_height="200dp"
-                        android:src="@drawable/third_offer" />
-
-                    <ImageView
-                        android:layout_width="414dp"
-                        android:layout_height="200dp"
-                        android:src="@drawable/fourth_offer" />
-
-                    <ImageView
-                        android:layout_width="414dp"
-                        android:layout_height="200dp"
-                        android:src="@drawable/fifth_offer" />
-                </LinearLayout>
-
-            </HorizontalScrollView>
-
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/tvMostPopular"
@@ -1136,4 +1117,7 @@
         </LinearLayout>
 
     </ScrollView>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

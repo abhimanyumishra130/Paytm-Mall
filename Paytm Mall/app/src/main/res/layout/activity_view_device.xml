@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    tools:context=".View_Device">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewTop"
@@ -287,10 +287,25 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/box"
                         android:contentDescription="@string/todo"/>
+
+
+
+
+
+
+
+
+
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             </androidx.cardview.widget.CardView>
+
+
+
+
+
 
 
         </LinearLayout>

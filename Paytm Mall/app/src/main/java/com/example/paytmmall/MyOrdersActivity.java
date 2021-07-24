@@ -6,19 +6,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MyOrdersActivity extends AppCompatActivity {
-    private Button go_home;
+    private ImageView ivBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_orders);
-        go_home=findViewById(R.id.orders_home);
-        go_home.setOnClickListener(new View.OnClickListener() {
+        ivBack=findViewById(R.id.ivBack);
+        ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MyOrdersActivity.this,firstPage.class);
+                Intent intent = new Intent(MyOrdersActivity.this,MenuActivity.class);
                 startActivity(intent);
             }
         });

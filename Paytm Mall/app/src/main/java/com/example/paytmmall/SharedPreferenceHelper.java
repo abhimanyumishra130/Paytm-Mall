@@ -19,4 +19,13 @@ public class SharedPreferenceHelper {
     public static String getStringPreference(Context context , String key){
         return getSharedPreference(context).getString(key,null);
     }
+
+    public static void writeIntegerPreference(Context context, String key, int value) {
+        SharedPreferences.Editor editor = getSharedPreference(context).edit();
+        editor.putInt(key, value);
+        editor.apply();
+    }
+    public static int getIntegerPreference(Context context , String key){
+        return getSharedPreference(context).getInt(key,0);
+    }
 }

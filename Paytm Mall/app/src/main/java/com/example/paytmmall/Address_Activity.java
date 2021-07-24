@@ -27,12 +27,14 @@ public class Address_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                // Intent intent = new Intent(Address_Activity.this,);
+              //  startActivity(intent);
             }
         });
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Intent intent = new Intent(Address_Activity.this,);
+                 Intent intent = new Intent(Address_Activity.this,View_Device.class);
+                 startActivity(intent);
             }
         });
     }

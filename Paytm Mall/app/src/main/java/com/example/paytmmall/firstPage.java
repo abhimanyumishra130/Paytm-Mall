@@ -73,8 +73,6 @@ public class firstPage extends AppCompatActivity {
     private void slideView() {
 
         ArrayList<SliderData> sliderDataArrayList = new ArrayList<>();
-
-
         SliderView sliderView = findViewById(R.id.slider);
 
         sliderDataArrayList.add(new SliderData(R.drawable.first_offer_));

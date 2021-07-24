@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f4ead60-7549-4586-858a-00c9804c0940" name="Default Changelist" comment="" />
+    <list default="true" id="5f4ead60-7549-4586-858a-00c9804c0940" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22-07-2021_08_02_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22-07-2021_08_02_PM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Paytm Mall/.idea/shelf/Uncommitted_changes_before_Checkout_at_22-07-2021_07_54_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Paytm Mall/.idea/shelf/Uncommitted_changes_before_Checkout_at_22-07-2021_07_54_PM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Paytm Mall/app/src/main/res/layout/activity_view_device.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Paytm Mall/app/src/main/res/layout/activity_view_device.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

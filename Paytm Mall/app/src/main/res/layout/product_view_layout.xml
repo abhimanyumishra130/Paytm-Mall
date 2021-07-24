@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:id="@+id/productViewItemLayout"
     android:layout_marginTop="10dp"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -86,7 +87,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
 
-                android:text="@string/_9_999"
+                android:text="9999"
+
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="@id/amount"
                 app:layout_constraintStart_toEndOf="@+id/amount"

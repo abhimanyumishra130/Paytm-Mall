@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.paytmmall.Product_Recycler.ProductRecyclerModel;
+
 public class firstPage extends AppCompatActivity {
 
     protected ImageView fpIvMobile, fpIvAllCategories,ivMenu,ivCart;
@@ -34,8 +36,14 @@ public class firstPage extends AppCompatActivity {
         fpIvMobile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-      /*  Intent intent = new Intent(firstPage.this, );
-        startActivity(intent);*/
+//                for(int i=0; i<20; i++){
+//                    int prod = SharedPreferenceHelper.getIntegerPreference(firstPage.this,"prodImg");
+//                    String str = SharedPreferenceHelper.getStringPreference(firstPage.this,"prodName");
+//                    ProductRecyclerModel first = new ProductRecyclerModel(prod,str,8499,9999);
+//                    ProductViewer_Activity.prodList.add(first);
+//                }
+//        Intent intent = new Intent(firstPage.this, ProductViewer_Activity.class);
+//        startActivity(intent);
             }
         });
 

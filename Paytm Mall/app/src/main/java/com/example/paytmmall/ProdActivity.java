@@ -55,7 +55,7 @@ public class ProdActivity extends Fragment implements OnClickListener{
         String str = SharedPreferenceHelper.getStringPreference(getContext(),"categories");
         if(str.equals("Trending")){
             categoriesName.setText(str);
-            ProductModel mask = new ProductModel(R.drawable.mask,"Mask And Sanitizers");
+            ProductModel mask = new ProductModel(R.drawable.mask,"Mask & Sanitizers");
             productModelList.add(mask);
 
             ProductModel oximeter = new ProductModel(R.drawable.oximeter,"Pulse Oximeter");

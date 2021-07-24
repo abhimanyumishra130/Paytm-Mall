@@ -20,8 +20,9 @@
             android:id="@+id/text_product"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="10dp"
             android:text="trending"
-            android:textColor="@color/black"
+            android:textColor="#778899"
             android:gravity="center"
             android:layout_gravity="center" />
 

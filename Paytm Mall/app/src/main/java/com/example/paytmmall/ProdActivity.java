@@ -1,5 +1,6 @@
 package com.example.paytmmall;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -187,7 +188,11 @@ public class ProdActivity extends Fragment implements OnClickListener{
     public void onClick(ProductModel productModel, int position) {
 
         String str = productModel.getText();
+        SharedPreferenceHelper.writeIntegerPreference(getContext(),"prodImg",productModel.getImg());
+        SharedPreferenceHelper.writeStringPreference(getContext(),"prodName",productModel.getText());
         Toast.makeText(getContext(), str+"   "+position, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getContext(),ProductViewer_Activity.class);
+        startActivity(intent);
 
     }
 }

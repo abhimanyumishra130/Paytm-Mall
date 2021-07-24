@@ -9,13 +9,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 public class MenuActivity extends AppCompatActivity {
 
 
-    private ImageButton trending,electronics,men_fashion,women_fashion,mobile_devices,home_kitchen,appliance,grocery,toys_kids;
+    private ImageView trending,electronics,men_fashion,women_fashion,mobile_devices,home_kitchen,appliance,grocery,toys_kids;
     private ImageButton cancel;
+    private ImageView myOrders;
 
 
     @Override
@@ -32,7 +34,7 @@ public class MenuActivity extends AppCompatActivity {
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent( MenuActivity.this, MainActivity.class);
+                Intent intent = new Intent( MenuActivity.this, firstPage.class);
                 startActivity(intent);
             }
         });
@@ -81,7 +83,7 @@ public class MenuActivity extends AppCompatActivity {
         mobile_devices.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Mobile");
+                SharedPreferenceHelper.writeStringPreference(MenuActivity.this,"categories","Mobile Accessories");
                 ProdActivity prodActivity = new ProdActivity();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.linearLayout,prodActivity);
@@ -129,10 +131,21 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
+
+
+        myOrders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this,MyOrdersActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void initView() {
         cancel=findViewById(R.id.cancel);
+        myOrders=findViewById(R.id.my_orders);
 
         trending=findViewById(R.id.trending);
         electronics=findViewById(R.id.electronics);

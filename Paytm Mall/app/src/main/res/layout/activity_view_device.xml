@@ -22,47 +22,47 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:contentDescription="@string/todo"
                 android:src="@drawable/ic_baseline_arrow_back_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginLeft="20dp"
-                android:contentDescription="@string/todo" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/cart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="38dp"
+                android:layout_height="29dp"
                 android:layout_marginEnd="20dp"
-                android:src="@drawable/ic_baseline_add_shopping_cart_24"
+                android:layout_marginRight="20dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/shopping_cart"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginRight="20dp"
-                android:contentDescription="@string/todo" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/topLike"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="38dp"
+                android:layout_height="29dp"
                 android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:contentDescription="@string/todo"
                 android:src="@drawable/ic_baseline_favorite_border_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/cart"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginRight="10dp"
-                android:contentDescription="@string/todo"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="38dp"
+                android:layout_height="29dp"
                 android:layout_margin="10dp"
+                android:contentDescription="@string/todo"
                 android:src="@drawable/ic_baseline_search_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/topLike"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="@string/todo"/>
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -89,26 +89,25 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/image1"
                         android:layout_width="400dp"
                         android:layout_height="match_parent"
+                        android:contentDescription="@string/todo"
                         android:cropToPadding="true"
-                        android:src="@drawable/mobile1"
-                        android:contentDescription="@string/todo"/>
+                        android:src="@drawable/mobile1" />
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:contentDescription="@string/todo"
                         android:cropToPadding="true"
-                        android:src="@drawable/mobile2"
-                        android:contentDescription="@string/todo"/>
+                        android:src="@drawable/mobile2" />
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:contentDescription="@string/todo"
                         android:cropToPadding="true"
-                        android:src="@drawable/mobile3"
-                        android:contentDescription="@string/todo"/>
+                        android:src="@drawable/mobile3" />
 
 
                 </LinearLayout>
@@ -116,50 +115,34 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
+                android:layout_height="wrap_content">
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
+
                     <TextView
                         android:id="@+id/title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
                         android:text="@string/realme_c1_3gb_32gb_cross_black"
                         android:textColor="@color/black"
                         android:textSize="@dimen/sp_17"
-                        android:layout_margin="10dp"
                         android:textStyle="normal"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
-
-                    <TextView
-                        android:id="@+id/Rs"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/dp_15"
-                        android:text="Rs "
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/title" />
-
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/amount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/dp_15"
-                        android:layout_marginTop="16dp"
                         android:text="@string/_8_999"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.07"
-                        app:layout_constraintStart_toStartOf="@+id/Rs"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/title" />
 
                     <TextView
@@ -177,48 +160,50 @@
                         android:id="@+id/star"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:layout_marginRight="10dp"
                         android:text="@string/_4_3"
                         android:textColor="@color/Yellow"
-                        android:layout_marginEnd="@dimen/dp_10"
+                        app:drawableLeftCompat="@drawable/ic_baseline_star_24"
+                        app:drawableStartCompat="@drawable/ic_baseline_star_24"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/count"
-                        app:layout_constraintTop_toBottomOf="@+id/title"
-                        android:layout_marginRight="10dp"
-                        app:drawableStartCompat="@drawable/ic_baseline_star_24"
-                        app:drawableLeftCompat="@drawable/ic_baseline_star_24" />
+                        app:layout_constraintTop_toBottomOf="@+id/title" />
+
                     <TextView
                         android:id="@+id/stock"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/hurry_only_2_left"
-                        app:layout_constraintTop_toBottomOf="@+id/amount"
-                        app:layout_constraintStart_toStartOf="parent"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:text="@string/hurry_only_2_left"
                         android:textColor="#FF0000"
-                        android:layout_marginLeft="@dimen/dp_15" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/amount" />
+
                     <TextView
                         android:id="@+id/emi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/emi_starts_299_month"
-                        app:layout_constraintTop_toBottomOf="@+id/stock"
-                        app:layout_constraintStart_toStartOf="parent"
                         android:layout_marginStart="@dimen/dp_15"
-                        android:layout_marginLeft="@dimen/dp_15" />
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:text="@string/emi_starts_299_month"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/stock" />
 
                     <TextView
                         android:id="@+id/plan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
                         android:paddingBottom="15dp"
                         android:text="@string/view_plans"
                         android:textColor="@color/blue"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/emi"
-                        app:layout_constraintTop_toBottomOf="@+id/stock"
-                        android:layout_marginLeft="@dimen/dp_10" />
+                        app:layout_constraintTop_toBottomOf="@+id/stock" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
@@ -236,10 +221,10 @@
                         android:id="@+id/line1"
                         android:layout_width="match_parent"
                         android:layout_height="3dp"
+                        android:contentDescription="@string/todo"
                         android:src="@color/grey"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/address"
@@ -247,13 +232,13 @@
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="20dp"
                         android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
                         android:text="@string/delivery_address"
                         android:textColor="@color/black"
                         android:textSize="17sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_marginLeft="15dp" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/pin"
@@ -282,37 +267,29 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_margin="15dp"
+                        android:contentDescription="@string/todo"
                         android:src="@color/grey"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/change"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toBottomOf="@+id/change" />
 
                     <ImageView
-
                         android:id="@+id/box"
                         android:layout_width="match_parent"
                         android:layout_height="400dp"
+                        android:contentDescription="@string/todo"
                         android:cropToPadding="true"
                         android:src="@drawable/box"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/line2"
-                        android:contentDescription="@string/todo"/>
+                        app:layout_constraintTop_toTopOf="@+id/line2" />
+
                     <ImageView
                         android:id="@+id/line3"
                         android:layout_width="match_parent"
                         android:layout_height="5dp"
+                        android:contentDescription="@string/todo"
                         android:src="@color/grey"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/box"
-                        android:contentDescription="@string/todo"/>
-
-
-
-
-
-
-
-
+                        app:layout_constraintTop_toBottomOf="@+id/box" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -321,43 +298,36 @@
             </androidx.cardview.widget.CardView>
 
 
-
-
-
-
-
         </LinearLayout>
     </ScrollView>
-    <Button
+
+    <TextView
         android:id="@+id/AddCart"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/add_to_cart"
-        android:textStyle="bold"
-        android:elevation="10dp"
-        android:clickable="true"
         android:background="@color/white"
-        android:padding="20dp"
-        android:textColor="@color/blue"
         android:gravity="center"
-        app:layout_constraintStart_toStartOf="parent"
+        android:padding="20dp"
+        android:text="@string/add_to_cart"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/BuyNow"
-        />
-    <Button
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
         android:id="@+id/BuyNow"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:padding="20dp"
         android:text="@string/buy_now"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:background="@color/blue"
-        android:padding="20dp"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/AddCart"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/AddCart" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

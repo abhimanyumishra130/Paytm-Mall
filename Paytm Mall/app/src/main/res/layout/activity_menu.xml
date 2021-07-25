@@ -21,12 +21,12 @@
 
         <ImageButton
             android:id="@+id/cancel"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
+            android:layout_width="13dp"
+            android:layout_height="14dp"
             android:layout_alignParentRight="true"
             android:layout_marginTop="15dp"
-            android:layout_marginRight="15dp"
-            android:src="@drawable/ic_cancel" />
+            android:layout_marginRight="16dp"
+            android:src="@drawable/cross" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -358,7 +358,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/prod_recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:background="@color/white"/>
 
 
     </LinearLayout>

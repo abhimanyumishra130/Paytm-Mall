@@ -184,7 +184,7 @@ public class ProductViewer_Activity extends AppCompatActivity implements Product
         SharedPreferenceHelper.writeStringPreference(ProductViewer_Activity.this,"prodNameId",productRecyclerModel.getProdName());
         SharedPreferenceHelper.writeIntegerPreference(ProductViewer_Activity.this,"prodAmount",productRecyclerModel.getAmount());
         SharedPreferenceHelper.writeIntegerPreference(ProductViewer_Activity.this,"prodAmountCut",productRecyclerModel.getAmountCut());
-        Intent intent = new Intent(ProductViewer_Activity.this,View_Device.class);
+        Intent intent = new Intent(ProductViewer_Activity.this,View_Devices.class);
         startActivity(intent);
     }
 }

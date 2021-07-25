@@ -12,25 +12,31 @@ import android.widget.Toast;
 
 import com.example.paytmmall.Product_Recycler.ProductRecyclerModel;
 
-public class View_Device extends AppCompatActivity {
+public class View_Devices extends AppCompatActivity {
 
     private TextView prodName,prodAmount;
     private ImageView prodImage,back;
     private Button addToCart,buyNow;
     private ImageView toCart;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_device);
+        setContentView(R.layout.activity_view_devices);
         initView();
         setProdData();
 
         toCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(View_Device.this, MyOrdersActivity.class);
+                Intent intent = new Intent(View_Devices.this, MyOrdersActivity.class);
+                startActivity(intent);
+            }
+        });
+        buyNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(View_Devices.this,TransactionAddress.class);
                 startActivity(intent);
             }
         });
@@ -39,7 +45,7 @@ public class View_Device extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(View_Device.this, ProductViewer_Activity.class);
+                Intent intent = new Intent(View_Devices.this, ProductViewer_Activity.class);
                 startActivity(intent);
             }
         });
@@ -47,34 +53,26 @@ public class View_Device extends AppCompatActivity {
         addToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int img = SharedPreferenceHelper.getIntegerPreference(View_Device.this,"prodImgId");
-                String name = SharedPreferenceHelper.getStringPreference(View_Device.this,"prodNameId");
-                int amount = (SharedPreferenceHelper.getIntegerPreference(View_Device.this,"prodAmount"));
-                int amountCut = (SharedPreferenceHelper.getIntegerPreference(View_Device.this,"prodAmountCut"));
+                int img = SharedPreferenceHelper.getIntegerPreference(View_Devices.this,"prodImgId");
+                String name = SharedPreferenceHelper.getStringPreference(View_Devices.this,"prodNameId");
+                int amount = (SharedPreferenceHelper.getIntegerPreference(View_Devices.this,"prodAmount"));
+                int amountCut = (SharedPreferenceHelper.getIntegerPreference(View_Devices.this,"prodAmountCut"));
                 ProductRecyclerModel prod =new ProductRecyclerModel(img,name,amount,amountCut);
                 MyOrdersActivity.cartList.add(prod);
 
-                Toast.makeText(View_Device.this, "added to cart", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        buyNow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(View_Device.this, TransactionAddress.class);
-                startActivity(intent);
+                Toast.makeText(View_Devices.this, "added to cart", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     private void setProdData() {
-        int img = SharedPreferenceHelper.getIntegerPreference(View_Device.this,"prodImgId");
+        int img = SharedPreferenceHelper.getIntegerPreference(View_Devices.this,"prodImgId");
         prodImage.setImageResource(img);
 
-        String name = SharedPreferenceHelper.getStringPreference(View_Device.this,"prodNameId");
+        String name = SharedPreferenceHelper.getStringPreference(View_Devices.this,"prodNameId");
         prodName.setText(name);
 
-        String amount = (SharedPreferenceHelper.getIntegerPreference(View_Device.this,"prodAmount"))+"";
+        String amount = (SharedPreferenceHelper.getIntegerPreference(View_Devices.this,"prodAmount"))+"";
         prodAmount.setText(amount);
     }
 

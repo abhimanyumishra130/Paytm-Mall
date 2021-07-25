@@ -36,14 +36,9 @@ public class firstPage extends AppCompatActivity {
         fpIvMobile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                for(int i=0; i<20; i++){
-//                    int prod = SharedPreferenceHelper.getIntegerPreference(firstPage.this,"prodImg");
-//                    String str = SharedPreferenceHelper.getStringPreference(firstPage.this,"prodName");
-//                    ProductRecyclerModel first = new ProductRecyclerModel(prod,str,8499,9999);
-//                    ProductViewer_Activity.prodList.add(first);
-//                }
-//        Intent intent = new Intent(firstPage.this, ProductViewer_Activity.class);
-//        startActivity(intent);
+                SharedPreferenceHelper.writeStringPreference(firstPage.this,"prodName","Mobiles");
+        Intent intent = new Intent(firstPage.this, ProductViewer_Activity.class);
+        startActivity(intent);
             }
         });
 

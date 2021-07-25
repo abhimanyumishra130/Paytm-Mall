@@ -57,6 +57,14 @@ public class View_Device extends AppCompatActivity {
                 Toast.makeText(View_Device.this, "added to cart", Toast.LENGTH_SHORT).show();
             }
         });
+
+        buyNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(View_Device.this, TransactionAddress.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setProdData() {

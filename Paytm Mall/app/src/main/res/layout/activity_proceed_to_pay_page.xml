@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7AF3F3F3"
+    android:background="@color/white"
     tools:context=".ProceedToPayPage">
 
     <ScrollView
@@ -48,20 +48,21 @@
                     <ImageView
                         android:id="@+id/image"
                         android:layout_width="130dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="90dp"
                         android:contentDescription="@string/todo"
                         android:src="@drawable/realme_c1"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
                     <TextView
                         android:id="@+id/title"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="25dp"
                         android:text="@string/realme_c1_3gb_32gb_cross_black"
                         android:textColor="@color/black"
-                        android:textSize="17sp"
+                        android:textSize="13sp"
                         android:textStyle="normal"
                         app:layout_constraintStart_toEndOf="@+id/image"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -94,7 +95,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/_9_599"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="13sp"
                         app:layout_constraintStart_toEndOf="@+id/image"
                         app:layout_constraintTop_toBottomOf="@+id/star" />
 
@@ -107,7 +108,7 @@
                         android:layout_marginLeft="10dp"
 
                         android:text="9999"
-                        android:textSize="15sp"
+                        android:textSize="13sp"
                         app:layout_constraintBottom_toBottomOf="@id/amount"
                         app:layout_constraintStart_toEndOf="@+id/amount"
                         app:layout_constraintTop_toTopOf="@+id/amount" />
@@ -123,9 +124,37 @@
                         app:layout_constraintStart_toEndOf="@+id/amountCut"
                         app:layout_constraintTop_toTopOf="@id/amountCut" />
 
-
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
             </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/removeItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#F7F6F6F6"
+                    android:layout_marginHorizontal="@dimen/dp_15"
+                    android:text="Delete" />
+
+                <Button
+                    android:id="@+id/saveForLater"
+                    android:background="@color/grey"
+                    android:layout_marginHorizontal="@dimen/dp_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save For Later" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="7dp"
+                android:background="#D6CECE"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

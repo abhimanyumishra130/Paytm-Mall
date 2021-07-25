@@ -9,9 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PaytmMall">
-        <activity android:name=".firstPage"></activity>
+        <activity android:name=".PlacedOrders"></activity>
+        <activity android:name=".SuccessfulPayment" />
+        <activity android:name=".ProceedToPayPage" />
+        <activity android:name=".TransactionAddress" />
+        <activity android:name=".firstPage" />
         <activity android:name=".MyOrdersActivity" />
-        <activity android:name=".View_Device"></activity>
+        <activity android:name=".View_Device" />
         <activity android:name=".ProductViewer_Activity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".MainActivity">

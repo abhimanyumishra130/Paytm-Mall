@@ -89,6 +89,7 @@
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:id="@+id/image1"
                         android:layout_width="400dp"
                         android:layout_height="match_parent"
                         android:cropToPadding="true"
@@ -134,15 +135,31 @@
                         app:layout_constraintTop_toTopOf="parent"/>
 
                     <TextView
-                        android:id="@+id/amount"
+                        android:id="@+id/Rs"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/dp_15"
-                        android:text="@string/_8_999"
+                        android:text="Rs "
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+
+                    <TextView
+                        android:id="@+id/amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_15"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/_8_999"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.07"
+                        app:layout_constraintStart_toStartOf="@+id/Rs"
                         app:layout_constraintTop_toBottomOf="@+id/title" />
 
                     <TextView
@@ -271,6 +288,7 @@
                         android:contentDescription="@string/todo"/>
 
                     <ImageView
+
                         android:id="@+id/box"
                         android:layout_width="match_parent"
                         android:layout_height="400dp"
@@ -310,12 +328,14 @@
 
         </LinearLayout>
     </ScrollView>
-    <TextView
+    <Button
         android:id="@+id/AddCart"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/add_to_cart"
         android:textStyle="bold"
+        android:elevation="10dp"
+        android:clickable="true"
         android:background="@color/white"
         android:padding="20dp"
         android:textColor="@color/blue"
@@ -324,7 +344,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/BuyNow"
         />
-    <TextView
+    <Button
         android:id="@+id/BuyNow"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

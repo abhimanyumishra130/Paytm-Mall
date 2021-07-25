@@ -5,38 +5,40 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.paytmmall.Cart_RecyclerView.CartAdapter;
+import com.example.paytmmall.Product_Recycler.OrderAdapter;
 import com.example.paytmmall.Product_Recycler.ProductOnClickListener;
-import com.example.paytmmall.Product_Recycler.ProductRecyclerAdapter;
 import com.example.paytmmall.Product_Recycler.ProductRecyclerModel;
 
 import java.util.ArrayList;
 
-public class MyOrdersActivity extends AppCompatActivity implements ProductOnClickListener {
+public class PlacedOrders extends AppCompatActivity implements ProductOnClickListener {
 
-    private RecyclerView recyclerView;
+    public static ArrayList<ProductRecyclerModel> orderList= new ArrayList<>();
+    private Button go_Home;
     private ImageView back;
-    public static ArrayList<ProductRecyclerModel> cartList = new ArrayList<>();
-    private Button go_home;
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_orders);
-        recyclerView=findViewById(R.id.cartRecyclerView);
-        back=findViewById(R.id.arrow);
-        go_home=findViewById(R.id.orders_home);
-        if(cartList.size()==0) {
-            go_home.setVisibility(View.VISIBLE);
-            go_home.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_placed_orders);
+
+        go_Home=findViewById(R.id.orders_Home);
+        back=findViewById(R.id.Arrow);
+        recyclerView=findViewById(R.id.ordersRecyclerView);
+
+        if(orderList.size()==0) {
+            go_Home.setVisibility(View.VISIBLE);
+            go_Home.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(MyOrdersActivity.this, firstPage.class);
+                    Intent intent = new Intent(PlacedOrders.this, firstPage.class);
                     startActivity(intent);
                 }
             });
@@ -45,7 +47,7 @@ public class MyOrdersActivity extends AppCompatActivity implements ProductOnClic
             back.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(MyOrdersActivity.this,firstPage.class);
+                    Intent intent = new Intent(PlacedOrders.this,firstPage.class);
                     startActivity(intent);
                 }
             });
@@ -56,15 +58,15 @@ public class MyOrdersActivity extends AppCompatActivity implements ProductOnClic
     }
 
     private void setRecyclerView() {
-        CartAdapter adapter = new CartAdapter(cartList,this);
+        OrderAdapter orderAdapter = new OrderAdapter(orderList,this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(linearLayoutManager);
-        adapter.notifyDataSetChanged();
+        recyclerView.setAdapter(orderAdapter);
+
     }
 
     @Override
     public void productOnClick(ProductRecyclerModel productRecyclerModel, int position) {
-        cartList.remove(position);
+
     }
 }

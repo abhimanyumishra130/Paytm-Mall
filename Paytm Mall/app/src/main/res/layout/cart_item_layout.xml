@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/CartViewItemLayout"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ItemImage"
+                android:layout_width="130dp"
+                android:layout_height="140dp"
+                android:src="@drawable/realme_c1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/todo"/>
+
+            <ImageView
+                android:id="@+id/like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_baseline_favorite_border_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="15dp"
+                android:contentDescription="@string/todo"/>
+
+            <TextView
+                android:id="@+id/ItemTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/realme_c1_3gb_32gb_cross_black"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toStartOf="@+id/like"
+                app:layout_constraintStart_toEndOf="@+id/ItemImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/_4_3"
+                android:textColor="#FFF400"
+                app:layout_constraintStart_toEndOf="@+id/ItemImage"
+                app:layout_constraintTop_toBottomOf="@+id/ItemTitle"
+                app:drawableStartCompat="@drawable/ic_baseline_star_24"
+                app:drawableLeftCompat="@drawable/ic_baseline_star_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="@string/_6"
+                app:layout_constraintStart_toEndOf="@+id/star"
+                app:layout_constraintTop_toBottomOf="@+id/ItemTitle"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/Aamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_9_599"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/ItemImage"
+                app:layout_constraintTop_toBottomOf="@+id/star" />
+
+            <TextView
+                android:id="@+id/AamountCut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+
+                android:text="9999"
+
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/Aamount"
+                app:layout_constraintStart_toEndOf="@+id/Aamount"
+                app:layout_constraintTop_toTopOf="@+id/Aamount"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/_4_off"
+                android:textColor="@android:color/holo_green_dark"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/AamountCut"
+                app:layout_constraintTop_toTopOf="@id/AamountCut"
+                android:layout_marginStart="10dp" />
+
+            <Button
+                android:id="@+id/RemoveItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#B1D8F6"
+                android:text="remove"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.917"
+                app:layout_constraintStart_toEndOf="@id/ItemImage"
+                app:layout_constraintTop_toBottomOf="@id/AamountCut" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

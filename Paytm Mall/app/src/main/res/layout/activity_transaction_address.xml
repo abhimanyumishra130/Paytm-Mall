@@ -140,6 +140,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
+            android:id="@+id/goToPay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/blue"

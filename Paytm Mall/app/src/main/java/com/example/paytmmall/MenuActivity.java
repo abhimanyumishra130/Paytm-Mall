@@ -136,7 +136,7 @@ public class MenuActivity extends AppCompatActivity {
         myOrders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this,MyOrdersActivity.class);
+                Intent intent = new Intent(MenuActivity.this,PlacedOrders.class);
                 startActivity(intent);
             }
         });

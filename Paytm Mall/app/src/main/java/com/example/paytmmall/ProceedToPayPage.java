@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -111,8 +112,9 @@ public class ProceedToPayPage extends AppCompatActivity {
 
         img=findViewById(R.id.Image);
         name= findViewById(R.id.Title);
-        ogPrice=findViewById(R.id.amount);
-        cutPrice=findViewById(R.id.amountCut);
+        ogPrice=findViewById(R.id.amountCut);
+        ogPrice.setPaintFlags(ogPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        cutPrice=findViewById(R.id.amount);
         totalPrice=findViewById(R.id.totalPrice);
         mrp=findViewById(R.id.MRP);
         sellingPrice=findViewById(R.id.sellingPrice);

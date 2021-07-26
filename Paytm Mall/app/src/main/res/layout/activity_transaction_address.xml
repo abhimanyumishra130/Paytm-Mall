@@ -44,42 +44,52 @@
 
 
         <EditText
+            android:id="@+id/IvName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:hint="Full Name"
             android:textColor="@color/black"
+            android:inputType="textPersonName"
             android:textSize="18sp" />
 
         <EditText
+            android:id="@+id/IvNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:hint="Mobile Number"
+            android:inputType="number"
             android:textColor="@color/black"
             android:textSize="18sp" />
 
         <EditText
+            android:id="@+id/IvPincode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:hint="Pincode"
+            android:inputType="number"
             android:textColor="@color/black"
             android:textSize="18sp" />
 
         <EditText
+            android:id="@+id/IvHomeNo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:hint="House no., Apartment name"
+            android:inputType="text"
             android:textColor="@color/black"
             android:textSize="18sp" />
 
         <EditText
+            android:id="@+id/IvLocality"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:hint="Road, Area, Locality"
+            android:inputType="text"
             android:textColor="@color/black"
             android:textSize="18sp" />
 

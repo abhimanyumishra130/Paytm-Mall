@@ -42,4 +42,9 @@ public class CartAdapter extends RecyclerView.Adapter<CartViewHolder> {
     public int getItemCount() {
         return cartListItem.size();
     }
+
+    public void updateData(ArrayList<ProductRecyclerModel> cartListItem) {
+        this.cartListItem = cartListItem;
+        notifyDataSetChanged();
+    }
 }

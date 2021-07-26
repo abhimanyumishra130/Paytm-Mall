@@ -28,8 +28,8 @@ public class OrderViewHolder extends RecyclerView.ViewHolder {
     private void initView(View itemView) {
         img = itemView.findViewById(R.id.itemImage);
         ivProdName= itemView.findViewById(R.id.itemTitle);
-        ivProdAmount=itemView.findViewById(R.id.aamount);
-        ivProdAmountCut=itemView.findViewById(R.id.aamountCut);
+        ivProdAmount=itemView.findViewById(R.id.aamountCut);
+        ivProdAmountCut=itemView.findViewById(R.id.aamount);
         linearLayout=itemView.findViewById(R.id.ProductViewItemLayout);
     }
 
@@ -38,7 +38,7 @@ public class OrderViewHolder extends RecyclerView.ViewHolder {
         ivProdName.setText(productRecyclerModel.getProdName());
         ivProdAmount.setText(productRecyclerModel.getAmount()+"");
         ivProdAmountCut.setText(productRecyclerModel.getAmountCut()+"");
-        ivProdAmountCut.setPaintFlags(ivProdAmountCut.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        ivProdAmount.setPaintFlags(ivProdAmount.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -16,8 +16,9 @@ import java.util.ArrayList;
 
 public class firstPage extends AppCompatActivity {
 
-    protected ImageView fpIvMobile, fpIvAllCategories,ivMenu,ivCart;
+    protected ImageView fpIvMobile, fpIvAllCategories,ivMenu,ivCart,ivTablets;
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +32,7 @@ public class firstPage extends AppCompatActivity {
         fpIvAllCategories = findViewById(R.id.ivAllCategories);
         ivMenu=findViewById(R.id.ivMenu);
         ivCart=findViewById(R.id.ivCart);
-
+        ivTablets = findViewById(R.id.ivTablets);
         ivMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,6 +46,14 @@ public class firstPage extends AppCompatActivity {
                 SharedPreferenceHelper.writeStringPreference(firstPage.this,"prodName","Mobiles");
         Intent intent = new Intent(firstPage.this, ProductViewer_Activity.class);
         startActivity(intent);
+            }
+        });
+        ivTablets.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferenceHelper.writeStringPreference(firstPage.this,"prodName","Tablets");
+                Intent intent = new Intent(firstPage.this, ProductViewer_Activity.class);
+                startActivity(intent);
             }
         });
 

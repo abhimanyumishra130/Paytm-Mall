@@ -27,8 +27,8 @@ public class ProductRecyclerViewHolder extends RecyclerView.ViewHolder {
     private void initView(View itemView) {
         img = itemView.findViewById(R.id.image);
         ivProdName= itemView.findViewById(R.id.title);
-        ivProdAmount=itemView.findViewById(R.id.amount);
-        ivProdAmountCut=itemView.findViewById(R.id.amountCut);
+        ivProdAmount=itemView.findViewById(R.id.amountCut);
+        ivProdAmountCut=itemView.findViewById(R.id.amount);
         linearLayout=itemView.findViewById(R.id.productViewItemLayout);
     }
 
@@ -37,7 +37,7 @@ public class ProductRecyclerViewHolder extends RecyclerView.ViewHolder {
         ivProdName.setText(productRecyclerModel.getProdName());
         ivProdAmount.setText(productRecyclerModel.getAmount()+"");
         ivProdAmountCut.setText(productRecyclerModel.getAmountCut()+"");
-        ivProdAmountCut.setPaintFlags(ivProdAmountCut.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        ivProdAmount.setPaintFlags(ivProdAmount.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

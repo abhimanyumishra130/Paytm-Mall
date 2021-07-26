@@ -7,11 +7,12 @@ public class ProductRecyclerModel {
     private int amount;
     private int amountCut;
 
-    public ProductRecyclerModel(int imgId, String prodName, int amount, int amountCut) {
+    public ProductRecyclerModel(int imgId, String prodName,int amountCut, int amount) {
         this.imgId = imgId;
         this.prodName = prodName;
         this.amount = amount;
         this.amountCut = amountCut;
+
     }
 
     public int getImgId() {
@@ -23,10 +24,10 @@ public class ProductRecyclerModel {
     }
 
     public int getAmount() {
-        return amount;
+        return amountCut;
     }
 
     public int getAmountCut() {
-        return amountCut;
+        return amount;
     }
 }

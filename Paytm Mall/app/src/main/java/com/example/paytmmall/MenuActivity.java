@@ -78,6 +78,7 @@ public class MenuActivity extends AppCompatActivity {
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.linearLayout,prodActivity);
                 transaction.commit();
+
             }
         });
         mobile_devices.setOnClickListener(new View.OnClickListener() {

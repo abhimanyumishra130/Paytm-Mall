@@ -19,13 +19,13 @@ public class TransactionAddress extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaction_address);
 
-        goToPay= findViewById(R.id.goToPay);
+        goToPay = findViewById(R.id.goToPay);
         ivBack = findViewById(R.id.ivBackArrow);
 
         goToPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TransactionAddress.this,ProceedToPayPage.class);
+                Intent intent = new Intent(TransactionAddress.this, ProceedToPayPage.class);
                 startActivity(intent);
             }
         });

@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class firstPage extends AppCompatActivity {
 
-    protected ImageView fpIvMobile, fpIvAllCategories,ivMenu,ivCart,ivTablets;
+    protected ImageView fpIvMobile, fpIvAllCategories, ivMenu, ivCart, ivTablets;
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
@@ -30,28 +30,28 @@ public class firstPage extends AppCompatActivity {
     private void initView() {
         fpIvMobile = findViewById(R.id.ivMobiles);
         fpIvAllCategories = findViewById(R.id.ivAllCategories);
-        ivMenu=findViewById(R.id.ivMenu);
-        ivCart=findViewById(R.id.ivCart);
+        ivMenu = findViewById(R.id.ivMenu);
+        ivCart = findViewById(R.id.ivCart);
         ivTablets = findViewById(R.id.ivTablets);
         ivMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(firstPage.this,MenuActivity.class);
+                Intent intent = new Intent(firstPage.this, MenuActivity.class);
                 startActivity(intent);
             }
         });
         fpIvMobile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferenceHelper.writeStringPreference(firstPage.this,"prodName","Mobiles");
-        Intent intent = new Intent(firstPage.this, ProductViewer_Activity.class);
-        startActivity(intent);
+                SharedPreferenceHelper.writeStringPreference(firstPage.this, "prodName", "Mobiles");
+                Intent intent = new Intent(firstPage.this, ProductViewer_Activity.class);
+                startActivity(intent);
             }
         });
         ivTablets.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferenceHelper.writeStringPreference(firstPage.this,"prodName","Tablets");
+                SharedPreferenceHelper.writeStringPreference(firstPage.this, "prodName", "Tablets");
                 Intent intent = new Intent(firstPage.this, ProductViewer_Activity.class);
                 startActivity(intent);
             }
@@ -60,8 +60,8 @@ public class firstPage extends AppCompatActivity {
         fpIvAllCategories.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                  Intent intent = new Intent(firstPage.this,MenuActivity.class);
-        startActivity(intent);
+                Intent intent = new Intent(firstPage.this, MenuActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -69,12 +69,13 @@ public class firstPage extends AppCompatActivity {
         ivCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(firstPage.this,MyOrdersActivity.class);
+                Intent intent = new Intent(firstPage.this, MyOrdersActivity.class);
                 startActivity(intent);
             }
         });
 
     }
+
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
 
 

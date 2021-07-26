@@ -28,10 +28,10 @@ public class MyOrdersActivity extends AppCompatActivity implements ProductOnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_orders);
-        recyclerView=findViewById(R.id.cartRecyclerView);
-        back=findViewById(R.id.arrow);
-        go_home=findViewById(R.id.orders_home);
-        if(cartList.size()==0) {
+        recyclerView = findViewById(R.id.cartRecyclerView);
+        back = findViewById(R.id.arrow);
+        go_home = findViewById(R.id.orders_home);
+        if (cartList.size() == 0) {
             go_home.setVisibility(View.VISIBLE);
             go_home.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -40,12 +40,12 @@ public class MyOrdersActivity extends AppCompatActivity implements ProductOnClic
                     startActivity(intent);
                 }
             });
-        }else {
+        } else {
 
             back.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(MyOrdersActivity.this,firstPage.class);
+                    Intent intent = new Intent(MyOrdersActivity.this, firstPage.class);
                     startActivity(intent);
                 }
             });
@@ -56,7 +56,7 @@ public class MyOrdersActivity extends AppCompatActivity implements ProductOnClic
     }
 
     private void setRecyclerView() {
-        CartAdapter adapter = new CartAdapter(cartList,this);
+        CartAdapter adapter = new CartAdapter(cartList, this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(linearLayoutManager);

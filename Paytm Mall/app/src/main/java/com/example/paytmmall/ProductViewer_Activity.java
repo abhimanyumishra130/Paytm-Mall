@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class ProductViewer_Activity extends AppCompatActivity implements ProductOnClickListener {
 
     private TextView pageTitle;
-    private ImageView back,toCart;
+    private ImageView back, toCart;
 
     private RecyclerView recyclerView;
     private ArrayList<ProductRecyclerModel> prodList = new ArrayList<>();
@@ -37,7 +37,7 @@ public class ProductViewer_Activity extends AppCompatActivity implements Product
         toCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ProductViewer_Activity.this,MyOrdersActivity.class);
+                Intent intent = new Intent(ProductViewer_Activity.this, MyOrdersActivity.class);
                 startActivity(intent);
             }
         });
@@ -45,36 +45,36 @@ public class ProductViewer_Activity extends AppCompatActivity implements Product
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ProductViewer_Activity.this,MenuActivity.class);
+                Intent intent = new Intent(ProductViewer_Activity.this, MenuActivity.class);
                 startActivity(intent);
             }
         });
     }
 
     private void initView() {
-        toCart=findViewById(R.id.cart);
+        toCart = findViewById(R.id.cart);
         recyclerView = findViewById(R.id.productView_recycler);
-        pageTitle=findViewById(R.id.heading);
-        back=findViewById(R.id.arrow);
+        pageTitle = findViewById(R.id.heading);
+        back = findViewById(R.id.arrow);
     }
 
     private void pageView() {
-        String str = SharedPreferenceHelper.getStringPreference(ProductViewer_Activity.this,"prodName");
+        String str = SharedPreferenceHelper.getStringPreference(ProductViewer_Activity.this, "prodName");
         pageTitle.setText(str);
 
     }
 
     private void setRecyclerView() {
-        ProductRecyclerAdapter adapter = new ProductRecyclerAdapter(prodList,this);
+        ProductRecyclerAdapter adapter = new ProductRecyclerAdapter(prodList, this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
     }
 
     private void buildList() {
-        String str = SharedPreferenceHelper.getStringPreference(ProductViewer_Activity.this,"prodName");
-        if(str.equals("Mobiles")){
-            for(int i=0; i<2; i++) {
+        String str = SharedPreferenceHelper.getStringPreference(ProductViewer_Activity.this, "prodName");
+        if (str.equals("Mobiles")) {
+            for (int i = 0; i < 2; i++) {
                 ProductRecyclerModel mob1 = new ProductRecyclerModel(R.drawable.mob1, "real me 6 Pro", 12000, 10000);
                 prodList.add(mob1);
 
@@ -105,8 +105,8 @@ public class ProductViewer_Activity extends AppCompatActivity implements Product
                 ProductRecyclerModel mob10 = new ProductRecyclerModel(R.drawable.mob10, "real me 7 Pro", 18000, 15500);
                 prodList.add(mob10);
             }
-        }else if(str.equals("Tablets")){
-            for(int i=0; i<2; i++) {
+        } else if (str.equals("Tablets")) {
+            for (int i = 0; i < 2; i++) {
                 ProductRecyclerModel tablet1 = new ProductRecyclerModel(R.drawable.tab1, "lenovo yoga smart Tablet with The google assistant", 35000, 21500);
                 prodList.add(tablet1);
 
@@ -137,8 +137,8 @@ public class ProductViewer_Activity extends AppCompatActivity implements Product
                 ProductRecyclerModel tablet10 = new ProductRecyclerModel(R.drawable.tab10, "Lenovo M10 FHD Plus", 25000, 20000);
                 prodList.add(tablet10);
             }
-        }else if(str.equals("Portable Speakers")){
-            for(int i=0; i<3; i++) {
+        } else if (str.equals("Portable Speakers")) {
+            for (int i = 0; i < 3; i++) {
                 ProductRecyclerModel speakers1 = new ProductRecyclerModel(R.drawable.speaker1, "Zebronic Zee Count 764 Wires Bluetooth", 5000, 3000);
                 prodList.add(speakers1);
 
@@ -169,8 +169,8 @@ public class ProductViewer_Activity extends AppCompatActivity implements Product
                 ProductRecyclerModel speakers10 = new ProductRecyclerModel(R.drawable.speaker9, "Portinics sound quality Wireless Bluetooth", 5000, 3000);
                 prodList.add(speakers10);
             }
-        }else{
-            for(int i=0;i<20;i++) {
+        } else {
+            for (int i = 0; i < 20; i++) {
                 ProductRecyclerModel product = new ProductRecyclerModel(SharedPreferenceHelper.getIntegerPreference(ProductViewer_Activity.this, "prodImg"), str, 5000, 3000);
                 prodList.add(product);
             }
@@ -179,12 +179,12 @@ public class ProductViewer_Activity extends AppCompatActivity implements Product
 
     @Override
     public void productOnClick(ProductRecyclerModel productRecyclerModel, int position) {
-        String str = productRecyclerModel.getProdName()+"  "+position;
-        SharedPreferenceHelper.writeIntegerPreference(ProductViewer_Activity.this,"prodImgId",productRecyclerModel.getImgId());
-        SharedPreferenceHelper.writeStringPreference(ProductViewer_Activity.this,"prodNameId",productRecyclerModel.getProdName());
-        SharedPreferenceHelper.writeIntegerPreference(ProductViewer_Activity.this,"prodAmount",productRecyclerModel.getAmount());
-        SharedPreferenceHelper.writeIntegerPreference(ProductViewer_Activity.this,"prodAmountCut",productRecyclerModel.getAmountCut());
-        Intent intent = new Intent(ProductViewer_Activity.this,View_Devices.class);
+        String str = productRecyclerModel.getProdName() + "  " + position;
+        SharedPreferenceHelper.writeIntegerPreference(ProductViewer_Activity.this, "prodImgId", productRecyclerModel.getImgId());
+        SharedPreferenceHelper.writeStringPreference(ProductViewer_Activity.this, "prodNameId", productRecyclerModel.getProdName());
+        SharedPreferenceHelper.writeIntegerPreference(ProductViewer_Activity.this, "prodAmount", productRecyclerModel.getAmount());
+        SharedPreferenceHelper.writeIntegerPreference(ProductViewer_Activity.this, "prodAmountCut", productRecyclerModel.getAmountCut());
+        Intent intent = new Intent(ProductViewer_Activity.this, View_Devices.class);
         startActivity(intent);
     }
 }

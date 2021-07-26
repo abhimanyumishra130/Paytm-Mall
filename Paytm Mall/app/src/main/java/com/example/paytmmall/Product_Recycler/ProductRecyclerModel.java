@@ -7,7 +7,7 @@ public class ProductRecyclerModel {
     private int amount;
     private int amountCut;
 
-    public ProductRecyclerModel(int imgId, String prodName,int amountCut, int amount) {
+    public ProductRecyclerModel(int imgId, String prodName, int amountCut, int amount) {
         this.imgId = imgId;
         this.prodName = prodName;
         this.amount = amount;

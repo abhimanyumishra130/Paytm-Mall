@@ -16,14 +16,14 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
 
     public ProductAdapter(ArrayList<ProductModel> prod_list, OnClickListener onClickListener) {
         this.prod_list = prod_list;
-        this.onClickListener=onClickListener;
+        this.onClickListener = onClickListener;
     }
 
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout_categories,parent,false);
-        return new ProductViewHolder(view,onClickListener);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout_categories, parent, false);
+        return new ProductViewHolder(view, onClickListener);
     }
 
     @Override

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/CartViewItemLayout"
-    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_marginTop="10dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -19,10 +19,10 @@
                 android:id="@+id/ItemImage"
                 android:layout_width="130dp"
                 android:layout_height="140dp"
+                android:contentDescription="@string/todo"
                 android:src="@drawable/realme_c1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="@string/todo"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/like"
@@ -30,11 +30,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:contentDescription="@string/todo"
                 android:src="@drawable/ic_baseline_favorite_border_24"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginRight="15dp"
-                android:contentDescription="@string/todo"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/ItemTitle"
@@ -56,20 +56,20 @@
                 android:gravity="center"
                 android:text="@string/_4_3"
                 android:textColor="#FFF400"
-                app:layout_constraintStart_toEndOf="@+id/ItemImage"
-                app:layout_constraintTop_toBottomOf="@+id/ItemTitle"
+                app:drawableLeftCompat="@drawable/ic_baseline_star_24"
                 app:drawableStartCompat="@drawable/ic_baseline_star_24"
-                app:drawableLeftCompat="@drawable/ic_baseline_star_24" />
+                app:layout_constraintStart_toEndOf="@+id/ItemImage"
+                app:layout_constraintTop_toBottomOf="@+id/ItemTitle" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
                 android:gravity="center"
                 android:text="@string/_6"
                 app:layout_constraintStart_toEndOf="@+id/star"
-                app:layout_constraintTop_toBottomOf="@+id/ItemTitle"
-                android:layout_marginStart="5dp" />
+                app:layout_constraintTop_toBottomOf="@+id/ItemTitle" />
 
             <TextView
                 android:id="@+id/Aamount"
@@ -87,24 +87,24 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
 
-                android:text="9999"
+                android:layout_marginLeft="10dp"
 
+                android:text="9999"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="@id/Aamount"
                 app:layout_constraintStart_toEndOf="@+id/Aamount"
-                app:layout_constraintTop_toTopOf="@+id/Aamount"
-                android:layout_marginLeft="10dp" />
+                app:layout_constraintTop_toTopOf="@+id/Aamount" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:text="@string/_4_off"
                 android:textColor="@android:color/holo_green_dark"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/AamountCut"
-                app:layout_constraintTop_toTopOf="@id/AamountCut"
-                android:layout_marginStart="10dp" />
+                app:layout_constraintTop_toTopOf="@id/AamountCut" />
 
             <Button
                 android:id="@+id/RemoveItem"
@@ -121,7 +121,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
 
 
 </LinearLayout>

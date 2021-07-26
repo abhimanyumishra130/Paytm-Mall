@@ -14,9 +14,9 @@ import com.example.paytmmall.Product_Recycler.ProductRecyclerModel;
 
 public class View_Devices extends AppCompatActivity {
 
-    private TextView prodName,prodAmount;
-    private ImageView prodImage,back;
-    private Button addToCart,buyNow;
+    private TextView prodName, prodAmount;
+    private ImageView prodImage, back;
+    private Button addToCart, buyNow;
     private ImageView toCart;
 
     @Override
@@ -36,7 +36,7 @@ public class View_Devices extends AppCompatActivity {
         buyNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(View_Devices.this,TransactionAddress.class);
+                Intent intent = new Intent(View_Devices.this, TransactionAddress.class);
                 startActivity(intent);
             }
         });
@@ -53,11 +53,11 @@ public class View_Devices extends AppCompatActivity {
         addToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int img = SharedPreferenceHelper.getIntegerPreference(View_Devices.this,"prodImgId");
-                String name = SharedPreferenceHelper.getStringPreference(View_Devices.this,"prodNameId");
-                int amount = (SharedPreferenceHelper.getIntegerPreference(View_Devices.this,"prodAmount"));
-                int amountCut = (SharedPreferenceHelper.getIntegerPreference(View_Devices.this,"prodAmountCut"));
-                ProductRecyclerModel prod =new ProductRecyclerModel(img,name,amount,amountCut);
+                int img = SharedPreferenceHelper.getIntegerPreference(View_Devices.this, "prodImgId");
+                String name = SharedPreferenceHelper.getStringPreference(View_Devices.this, "prodNameId");
+                int amount = (SharedPreferenceHelper.getIntegerPreference(View_Devices.this, "prodAmount"));
+                int amountCut = (SharedPreferenceHelper.getIntegerPreference(View_Devices.this, "prodAmountCut"));
+                ProductRecyclerModel prod = new ProductRecyclerModel(img, name, amount, amountCut);
                 MyOrdersActivity.cartList.add(prod);
 
                 Toast.makeText(View_Devices.this, "added to cart", Toast.LENGTH_SHORT).show();
@@ -66,24 +66,24 @@ public class View_Devices extends AppCompatActivity {
     }
 
     private void setProdData() {
-        int img = SharedPreferenceHelper.getIntegerPreference(View_Devices.this,"prodImgId");
+        int img = SharedPreferenceHelper.getIntegerPreference(View_Devices.this, "prodImgId");
         prodImage.setImageResource(img);
 
-        String name = SharedPreferenceHelper.getStringPreference(View_Devices.this,"prodNameId");
+        String name = SharedPreferenceHelper.getStringPreference(View_Devices.this, "prodNameId");
         prodName.setText(name);
 
-        String amount = (SharedPreferenceHelper.getIntegerPreference(View_Devices.this,"prodAmount"))+"";
+        String amount = (SharedPreferenceHelper.getIntegerPreference(View_Devices.this, "prodAmount")) + "";
         prodAmount.setText(amount);
     }
 
     private void initView() {
-        toCart=findViewById(R.id.cart);
-        back=findViewById(R.id.arrow);
-        addToCart= findViewById(R.id.AddCart);
-        buyNow= findViewById(R.id.BuyNow);
+        toCart = findViewById(R.id.cart);
+        back = findViewById(R.id.arrow);
+        addToCart = findViewById(R.id.AddCart);
+        buyNow = findViewById(R.id.BuyNow);
 
-        prodName=findViewById(R.id.title);
-        prodAmount=findViewById(R.id.amount);
-        prodImage=findViewById(R.id.image1);
+        prodName = findViewById(R.id.title);
+        prodAmount = findViewById(R.id.amount);
+        prodImage = findViewById(R.id.image1);
     }
 }

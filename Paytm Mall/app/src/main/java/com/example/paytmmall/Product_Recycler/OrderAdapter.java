@@ -16,20 +16,20 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderViewHolder> {
     private ArrayList<ProductRecyclerModel> orderList;
     private ProductOnClickListener productOnClickListener;
 
-    public OrderAdapter(ArrayList<ProductRecyclerModel> orderList,ProductOnClickListener productOnClickListener) {
+    public OrderAdapter(ArrayList<ProductRecyclerModel> orderList, ProductOnClickListener productOnClickListener) {
         this.orderList = orderList;
-        this.productOnClickListener=productOnClickListener;
+        this.productOnClickListener = productOnClickListener;
     }
 
     @NonNull
     @Override
     public OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.order_placed_item_layout,parent,false);
-        return new OrderViewHolder(view,productOnClickListener);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.order_placed_item_layout, parent, false);
+        return new OrderViewHolder(view, productOnClickListener);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull  OrderViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull OrderViewHolder holder, int position) {
 
         ProductRecyclerModel productRecyclerModel = orderList.get(position);
         holder.setOrderData(productRecyclerModel);

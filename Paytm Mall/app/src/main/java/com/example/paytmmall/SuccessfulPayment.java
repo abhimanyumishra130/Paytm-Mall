@@ -16,11 +16,11 @@ public class SuccessfulPayment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_successful_payment);
 
-        home=findViewById(R.id.done);
+        home = findViewById(R.id.done);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SuccessfulPayment.this,firstPage.class);
+                Intent intent = new Intent(SuccessfulPayment.this, firstPage.class);
                 startActivity(intent);
             }
         });

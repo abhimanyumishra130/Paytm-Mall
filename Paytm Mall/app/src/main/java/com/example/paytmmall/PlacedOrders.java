@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class PlacedOrders extends AppCompatActivity implements ProductOnClickListener {
 
-    public static ArrayList<ProductRecyclerModel> orderList= new ArrayList<>();
+    public static ArrayList<ProductRecyclerModel> orderList = new ArrayList<>();
     private Button go_Home;
     private ImageView back;
     private RecyclerView recyclerView;
@@ -29,11 +29,11 @@ public class PlacedOrders extends AppCompatActivity implements ProductOnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_placed_orders);
 
-        go_Home=findViewById(R.id.orders_Home);
-        back=findViewById(R.id.Arrow);
-        recyclerView=findViewById(R.id.ordersRecyclerView);
+        go_Home = findViewById(R.id.orders_Home);
+        back = findViewById(R.id.Arrow);
+        recyclerView = findViewById(R.id.ordersRecyclerView);
 
-        if(orderList.size()==0) {
+        if (orderList.size() == 0) {
             go_Home.setVisibility(View.VISIBLE);
             go_Home.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -42,12 +42,12 @@ public class PlacedOrders extends AppCompatActivity implements ProductOnClickLis
                     startActivity(intent);
                 }
             });
-        }else {
+        } else {
 
             back.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(PlacedOrders.this,firstPage.class);
+                    Intent intent = new Intent(PlacedOrders.this, firstPage.class);
                     startActivity(intent);
                 }
             });
@@ -58,7 +58,7 @@ public class PlacedOrders extends AppCompatActivity implements ProductOnClickLis
     }
 
     private void setRecyclerView() {
-        OrderAdapter orderAdapter = new OrderAdapter(orderList,this);
+        OrderAdapter orderAdapter = new OrderAdapter(orderList, this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(orderAdapter);

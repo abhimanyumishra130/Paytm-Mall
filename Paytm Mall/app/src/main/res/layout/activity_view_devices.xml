@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View_Device">
+    tools:context=".View_Devices">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewTop"
@@ -31,20 +31,20 @@
 
             <ImageView
                 android:id="@+id/cart"
-                android:layout_width="38dp"
-                android:layout_height="29dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="20dp"
                 android:contentDescription="@string/todo"
-                android:src="@drawable/shopping_cart"
+                android:src="@drawable/ic_baseline_add_shopping_cart_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/topLike"
-                android:layout_width="38dp"
-                android:layout_height="29dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
                 android:contentDescription="@string/todo"
@@ -55,8 +55,8 @@
 
             <ImageView
                 android:id="@+id/search"
-                android:layout_width="38dp"
-                android:layout_height="29dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:contentDescription="@string/todo"
                 android:src="@drawable/ic_baseline_search_24"
@@ -89,6 +89,7 @@
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:id="@+id/image1"
                         android:layout_width="400dp"
                         android:layout_height="match_parent"
                         android:contentDescription="@string/todo"
@@ -134,15 +135,31 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/amount"
+                        android:id="@+id/Rs"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/dp_15"
-                        android:text="@string/_8_999"
+                        android:text="Rs "
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+
+                    <TextView
+                        android:id="@+id/amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_15"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/_8_999"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.07"
+                        app:layout_constraintStart_toStartOf="@+id/Rs"
                         app:layout_constraintTop_toBottomOf="@+id/title" />
 
                     <TextView
@@ -273,6 +290,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/change" />
 
                     <ImageView
+
                         android:id="@+id/box"
                         android:layout_width="match_parent"
                         android:layout_height="400dp"
@@ -301,11 +319,13 @@
         </LinearLayout>
     </ScrollView>
 
-    <TextView
+    <Button
         android:id="@+id/AddCart"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/white"
+        android:clickable="true"
+        android:elevation="10dp"
         android:gravity="center"
         android:padding="20dp"
         android:text="@string/add_to_cart"
@@ -315,7 +335,7 @@
         app:layout_constraintEnd_toStartOf="@+id/BuyNow"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+    <Button
         android:id="@+id/BuyNow"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

@@ -16,33 +16,33 @@ public class OrderViewHolder extends RecyclerView.ViewHolder {
     private ProductOnClickListener productOnClickListener;
     private LinearLayout linearLayout;
     private ImageView img;
-    private TextView ivProdName,ivProdAmount,ivProdAmountCut;
+    private TextView ivProdName, ivProdAmount, ivProdAmountCut;
 
-    public OrderViewHolder(@NonNull View itemView,ProductOnClickListener productOnClickListener) {
+    public OrderViewHolder(@NonNull View itemView, ProductOnClickListener productOnClickListener) {
         super(itemView);
-        this.productOnClickListener=productOnClickListener;
+        this.productOnClickListener = productOnClickListener;
         initView(itemView);
     }
 
 
     private void initView(View itemView) {
         img = itemView.findViewById(R.id.itemImage);
-        ivProdName= itemView.findViewById(R.id.itemTitle);
-        ivProdAmount=itemView.findViewById(R.id.aamount);
-        ivProdAmountCut=itemView.findViewById(R.id.aamountCut);
-        linearLayout=itemView.findViewById(R.id.ProductViewItemLayout);
+        ivProdName = itemView.findViewById(R.id.itemTitle);
+        ivProdAmount = itemView.findViewById(R.id.aamountCut);
+        ivProdAmountCut = itemView.findViewById(R.id.aamount);
+        linearLayout = itemView.findViewById(R.id.ProductViewItemLayout);
     }
 
-    public void setOrderData(ProductRecyclerModel productRecyclerModel){
+    public void setOrderData(ProductRecyclerModel productRecyclerModel) {
         img.setImageResource(productRecyclerModel.getImgId());
         ivProdName.setText(productRecyclerModel.getProdName());
-        ivProdAmount.setText(productRecyclerModel.getAmount()+"");
-        ivProdAmountCut.setText(productRecyclerModel.getAmountCut()+"");
-        ivProdAmountCut.setPaintFlags(ivProdAmountCut.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        ivProdAmount.setText(productRecyclerModel.getAmount() + "");
+        ivProdAmountCut.setText(productRecyclerModel.getAmountCut() + "");
+        ivProdAmount.setPaintFlags(ivProdAmount.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                productOnClickListener.productOnClick(productRecyclerModel,getAdapterPosition());
+                productOnClickListener.productOnClick(productRecyclerModel, getAdapterPosition());
             }
         });
     }

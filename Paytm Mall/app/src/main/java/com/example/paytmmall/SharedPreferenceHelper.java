@@ -12,12 +12,13 @@ public class SharedPreferenceHelper {
     }
 
     public static void writeStringPreference(Context context, String key, String value) {
-    SharedPreferences.Editor editor = getSharedPreference(context).edit();
-    editor.putString(key, value);
-    editor.apply();
+        SharedPreferences.Editor editor = getSharedPreference(context).edit();
+        editor.putString(key, value);
+        editor.apply();
     }
-    public static String getStringPreference(Context context , String key){
-        return getSharedPreference(context).getString(key,null);
+
+    public static String getStringPreference(Context context, String key) {
+        return getSharedPreference(context).getString(key, null);
     }
 
     public static void writeIntegerPreference(Context context, String key, int value) {
@@ -25,7 +26,8 @@ public class SharedPreferenceHelper {
         editor.putInt(key, value);
         editor.apply();
     }
-    public static int getIntegerPreference(Context context , String key){
-        return getSharedPreference(context).getInt(key,0);
+
+    public static int getIntegerPreference(Context context, String key) {
+        return getSharedPreference(context).getInt(key, 0);
     }
 }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +22,7 @@ public class ProceedToPayPage extends AppCompatActivity {
     String val;
 
 
-    private TextView name, ogPrice, cutPrice,totalPrice,mrp,sellingPrice;
+    private TextView name, ogPrice, cutPrice, totalPrice, mrp, sellingPrice;
     private ImageView img;
 
     @Override
@@ -46,8 +47,8 @@ public class ProceedToPayPage extends AppCompatActivity {
                 counter++;
                 val = Integer.toString(counter);
                 totalCount.setText(val + "");
-                int total = SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this,"prodAmountCut");
-                totalPrice.setText((total+19)*counter+"");
+                int total = SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this, "prodAmountCut");
+                totalPrice.setText((total + 19) * counter + "");
             }
         });
 
@@ -65,8 +66,8 @@ public class ProceedToPayPage extends AppCompatActivity {
                 counter--;
                 val = Integer.toString(counter);
                 totalCount.setText(val + "");
-                int total = SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this,"prodAmountCut");
-                totalPrice.setText((total+19)*counter+"");
+                int total = SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this, "prodAmountCut");
+                totalPrice.setText((total + 19) * counter + "");
 
 
             }
@@ -75,18 +76,16 @@ public class ProceedToPayPage extends AppCompatActivity {
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int img =SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this,"prodImgId");
-                String name = SharedPreferenceHelper.getStringPreference(ProceedToPayPage.this,"prodNameId");
-                int amount =SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this,"prodAmount");
-                int amountCut = SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this,"prodAmountCut");
+                int img = SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this, "prodImgId");
+                String name = SharedPreferenceHelper.getStringPreference(ProceedToPayPage.this, "prodNameId");
+                int amount = SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this, "prodAmount");
+                int amountCut = SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this, "prodAmountCut");
 
-                ProductRecyclerModel productRecyclerModel = new ProductRecyclerModel(img,name,amount,amountCut);
+                ProductRecyclerModel productRecyclerModel = new ProductRecyclerModel(img, name, amount, amountCut);
                 PlacedOrders.orderList.add(productRecyclerModel);
 
 
-
-
-                Intent intent = new Intent(ProceedToPayPage.this,SuccessfulPayment.class);
+                Intent intent = new Intent(ProceedToPayPage.this, SuccessfulPayment.class);
                 startActivity(intent);
             }
         });
@@ -94,29 +93,29 @@ public class ProceedToPayPage extends AppCompatActivity {
     }
 
     private void setData() {
-        img.setImageResource(SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this,"prodImgId"));
-        name.setText(SharedPreferenceHelper.getStringPreference(ProceedToPayPage.this,"prodNameId"));
-        ogPrice.setText(SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this,"prodAmount")+"");
-        cutPrice.setText(SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this,"prodAmountCut")+"");
-        int total = SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this,"prodAmountCut");
-        totalPrice.setText((total+19)*counter+"");
+        img.setImageResource(SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this, "prodImgId"));
+        name.setText(SharedPreferenceHelper.getStringPreference(ProceedToPayPage.this, "prodNameId"));
+        ogPrice.setText(SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this, "prodAmount") + "");
+        cutPrice.setText(SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this, "prodAmountCut") + "");
+        int total = SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this, "prodAmountCut");
+        totalPrice.setText((total + 19) * counter + "");
 
 
-
-        mrp.setText(SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this,"prodAmount")+"");
-        sellingPrice.setText(SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this,"prodAmountCut")+"");
+        mrp.setText(SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this, "prodAmount") + "");
+        sellingPrice.setText(SharedPreferenceHelper.getIntegerPreference(ProceedToPayPage.this, "prodAmountCut") + "");
     }
 
     private void initView() {
 
-        img=findViewById(R.id.Image);
-        name= findViewById(R.id.Title);
-        ogPrice=findViewById(R.id.amount);
-        cutPrice=findViewById(R.id.amountCut);
-        totalPrice=findViewById(R.id.totalPrice);
-        mrp=findViewById(R.id.MRP);
-        sellingPrice=findViewById(R.id.sellingPrice);
-        nextPage=findViewById(R.id.proceed_to_pay_button);
+        img = findViewById(R.id.Image);
+        name = findViewById(R.id.Title);
+        ogPrice = findViewById(R.id.amountCut);
+        ogPrice.setPaintFlags(ogPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        cutPrice = findViewById(R.id.amount);
+        totalPrice = findViewById(R.id.totalPrice);
+        mrp = findViewById(R.id.MRP);
+        sellingPrice = findViewById(R.id.sellingPrice);
+        nextPage = findViewById(R.id.proceed_to_pay_button);
 
         decrease = findViewById(R.id.decrease);
         increase = findViewById(R.id.increase);

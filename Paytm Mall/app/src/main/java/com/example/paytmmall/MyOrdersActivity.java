@@ -21,6 +21,8 @@ public class MyOrdersActivity extends AppCompatActivity implements ProductOnClic
 
     private RecyclerView recyclerView;
     private ImageView back;
+    CartAdapter cartAdapter;
+
     public static ArrayList<ProductRecyclerModel> cartList = new ArrayList<>();
     private Button go_home;
 
@@ -31,6 +33,7 @@ public class MyOrdersActivity extends AppCompatActivity implements ProductOnClic
         recyclerView=findViewById(R.id.cartRecyclerView);
         back=findViewById(R.id.arrow);
         go_home=findViewById(R.id.orders_home);
+
         if(cartList.size()==0) {
             go_home.setVisibility(View.VISIBLE);
             go_home.setOnClickListener(new View.OnClickListener() {
@@ -56,15 +59,17 @@ public class MyOrdersActivity extends AppCompatActivity implements ProductOnClic
     }
 
     private void setRecyclerView() {
-        CartAdapter adapter = new CartAdapter(cartList,this);
+         cartAdapter = new CartAdapter(cartList,this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(cartAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
-        adapter.notifyDataSetChanged();
+        cartAdapter.notifyDataSetChanged();
     }
 
     @Override
     public void productOnClick(ProductRecyclerModel productRecyclerModel, int position) {
         cartList.remove(position);
+        cartAdapter.updateData(cartList);
+
     }
 }

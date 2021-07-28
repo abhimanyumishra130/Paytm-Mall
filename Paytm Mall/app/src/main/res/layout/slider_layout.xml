@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--Image we will display is our slider view-->
     <ImageView
         android:id="@+id/ivImage"
         android:layout_width="400dp"

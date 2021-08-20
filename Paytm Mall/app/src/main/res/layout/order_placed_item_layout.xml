@@ -72,29 +72,55 @@
                 app:layout_constraintStart_toEndOf="@+id/star"
                 app:layout_constraintTop_toBottomOf="@+id/itemTitle" />
 
-            <TextView
-                android:id="@+id/aamount"
+            <LinearLayout
+                android:id="@+id/aamoun"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/_9_599"
-                android:textColor="@color/black"
-                android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/itemImage"
-                app:layout_constraintTop_toBottomOf="@+id/star" />
+                app:layout_constraintTop_toBottomOf="@+id/star">
 
-            <TextView
-                android:id="@+id/aamountCut"
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs."
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/aamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_9_599"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aamountCu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
 
                 android:layout_marginLeft="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/aamoun"
+                app:layout_constraintStart_toEndOf="@+id/aamoun"
+                app:layout_constraintTop_toTopOf="@+id/aamoun">
 
-                android:text="9999"
-                android:textSize="15sp"
-                app:layout_constraintBottom_toBottomOf="@id/aamount"
-                app:layout_constraintStart_toEndOf="@+id/aamount"
-                app:layout_constraintTop_toTopOf="@+id/aamount" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs."
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/aamountCut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9999"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -104,8 +130,8 @@
                 android:text="@string/_4_off"
                 android:textColor="@android:color/holo_green_dark"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/aamountCut"
-                app:layout_constraintTop_toTopOf="@id/aamountCut" />
+                app:layout_constraintStart_toEndOf="@+id/aamountCu"
+                app:layout_constraintTop_toTopOf="@id/aamountCu" />
 
             <TextView
                 android:layout_width="106dp"
@@ -117,7 +143,7 @@
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/itemImage"
-                app:layout_constraintTop_toBottomOf="@id/aamountCut" />
+                app:layout_constraintTop_toBottomOf="@id/aamountCu" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

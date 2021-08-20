@@ -71,29 +71,55 @@
                 app:layout_constraintStart_toEndOf="@+id/star"
                 app:layout_constraintTop_toBottomOf="@+id/ItemTitle" />
 
-            <TextView
-                android:id="@+id/Aamount"
+            <LinearLayout
+                android:id="@+id/Aamoun"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/_9_599"
-                android:textColor="@color/black"
-                android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/ItemImage"
-                app:layout_constraintTop_toBottomOf="@+id/star" />
+                app:layout_constraintTop_toBottomOf="@+id/star">
+                <TextView
+                    android:text="Rs."
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-            <TextView
-                android:id="@+id/AamountCut"
+                <TextView
+                    android:id="@+id/Aamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_9_599"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                     />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/AamountCu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/Aamoun"
+                app:layout_constraintStart_toEndOf="@+id/Aamoun"
+                app:layout_constraintTop_toTopOf="@+id/Aamoun" >
+                <TextView
+                    android:text="Rs."
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"/>
 
-                android:layout_marginLeft="10dp"
 
-                android:text="9999"
-                android:textSize="15sp"
-                app:layout_constraintBottom_toBottomOf="@id/Aamount"
-                app:layout_constraintStart_toEndOf="@+id/Aamount"
-                app:layout_constraintTop_toTopOf="@+id/Aamount" />
+                <TextView
+                    android:id="@+id/AamountCut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:text="9999"
+                    android:textSize="15sp"
+                    />
+            </LinearLayout>
+
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -103,8 +129,8 @@
                 android:text="@string/_4_off"
                 android:textColor="@android:color/holo_green_dark"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/AamountCut"
-                app:layout_constraintTop_toTopOf="@id/AamountCut" />
+                app:layout_constraintStart_toEndOf="@+id/AamountCu"
+                app:layout_constraintTop_toTopOf="@id/AamountCu" />
 
             <Button
                 android:id="@+id/RemoveItem"
@@ -116,7 +142,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.917"
                 app:layout_constraintStart_toEndOf="@id/ItemImage"
-                app:layout_constraintTop_toBottomOf="@id/AamountCut" />
+                app:layout_constraintTop_toBottomOf="@id/AamountCu" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

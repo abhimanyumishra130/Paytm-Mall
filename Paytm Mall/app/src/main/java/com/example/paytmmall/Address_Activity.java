@@ -33,7 +33,7 @@ public class Address_Activity extends AppCompatActivity {
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 Intent intent = new Intent(Address_Activity.this,View_Device.class);
+                 Intent intent = new Intent(Address_Activity.this,View_Devices.class);
                  startActivity(intent);
             }
         });

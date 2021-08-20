@@ -10,7 +10,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.paytmmall.MyOrdersActivity;
+import com.example.paytmmall.ProductViewer_Activity;
 import com.example.paytmmall.Product_Recycler.ProductRecyclerModel;
+import com.example.paytmmall.R;
+import com.example.paytmmall.SharedPreferenceHelper;
+import com.example.paytmmall.TransactionAddress;
 
 public class View_Devices extends AppCompatActivity {
 

@@ -71,29 +71,55 @@
                 app:layout_constraintTop_toBottomOf="@+id/title"
                 android:layout_marginStart="5dp" />
 
-            <TextView
-                android:id="@+id/amount"
+            <LinearLayout
+                android:id="@+id/amoun"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/_9_599"
-                android:textColor="@color/black"
-                android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/image"
-                app:layout_constraintTop_toBottomOf="@+id/star" />
+                app:layout_constraintTop_toBottomOf="@+id/star">
 
-            <TextView
-                android:id="@+id/amountCut"
+
+                <TextView
+                    android:text="Rs."
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_9_599"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/amountCu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
 
-                android:text="9999"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/amoun"
+                app:layout_constraintStart_toEndOf="@+id/amoun"
+                app:layout_constraintTop_toTopOf="@+id/amoun">
 
-                android:textSize="15sp"
-                app:layout_constraintBottom_toBottomOf="@id/amount"
-                app:layout_constraintStart_toEndOf="@+id/amount"
-                app:layout_constraintTop_toTopOf="@+id/amount"
-                android:layout_marginLeft="10dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs."
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/amountCut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9999"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -102,8 +128,8 @@
                 android:text="@string/_4_off"
                 android:textColor="@android:color/holo_green_dark"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/amountCut"
-                app:layout_constraintTop_toTopOf="@id/amountCut"
+                app:layout_constraintStart_toEndOf="@+id/amountCu"
+                app:layout_constraintTop_toTopOf="@id/amountCu"
                 android:layout_marginStart="10dp" />
 
 

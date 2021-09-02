@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".firstPage">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -173,10 +172,12 @@
                         app:layout_constraintTop_toBottomOf="@id/mobileImageCard"
                         app:layout_constraintVertical_bias="0.066" />
 
+                    
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cvElectronics"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
+                                                       
                         android:layout_margin="25dp"
                         app:cardCornerRadius="50dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -279,7 +280,6 @@
                         android:layout_height="wrap_content"
                         android:paddingTop="20dp"
                         android:text="Home &amp;\nKitchen"
-
                         android:textColor="#778899"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="@+id/cvHomeAndKitchen"

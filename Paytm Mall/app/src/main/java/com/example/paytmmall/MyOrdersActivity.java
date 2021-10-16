@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.paytmmall.Cart_RecyclerView.CartAdapter;
 import com.example.paytmmall.Product_Recycler.ProductOnClickListener;
@@ -20,7 +21,7 @@ import java.util.ArrayList;
 public class MyOrdersActivity extends AppCompatActivity implements ProductOnClickListener {
 
     private RecyclerView recyclerView;
-    private ImageView back;
+    private TextView back;
     CartAdapter cartAdapter;
 
     public static ArrayList<ProductRecyclerModel> cartList = new ArrayList<>();

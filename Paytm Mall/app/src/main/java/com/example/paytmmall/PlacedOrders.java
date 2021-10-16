@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.paytmmall.Product_Recycler.OrderAdapter;
 import com.example.paytmmall.Product_Recycler.ProductOnClickListener;
@@ -21,7 +22,7 @@ public class PlacedOrders extends AppCompatActivity implements ProductOnClickLis
 
     public static ArrayList<ProductRecyclerModel> orderList = new ArrayList<>();
     private Button go_Home;
-    private ImageView back;
+    private TextView back;
     private RecyclerView recyclerView;
 
     @Override

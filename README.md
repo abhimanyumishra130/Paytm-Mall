@@ -115,7 +115,7 @@ Copy the link of this repositary. Paste the link in Url Box of Android Studio wi
     <td>Product buy | Product check out</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/abhimanyumishra130/Paytm-Mall/blob/main/assets/check_myOrder.gif" width="280" /></td>
+    <td><img src="https://github.com/abhimanyumishra130/Paytm-Mall/blob/main/assets/product_buy.gif" width="280" /></td>
   </tr>
  </table>
  
